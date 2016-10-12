@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
-    {{ tickets.count }}
+    <title>Tickets | Dashboard</title>
 </head>
 <body>
+<h1>Dashboard</h1>
+<h3>    {{ tickets.count }}
+</h3>
 <ul>
     {% for ticket in tickets %}
-        <li>{{ ticket.title }} - {{ ticket.state }}</li>
+        <li><a href="{% url 'detail' ticket.id %}">{{ ticket.title }} - {{ ticket.state }}</a></li>
     {% endfor %}
 </ul>
 </body>

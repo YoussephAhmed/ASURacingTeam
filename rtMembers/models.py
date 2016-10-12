@@ -8,5 +8,5 @@ class RTMember(models.Model):  # For  holding all RT members and assinging a rol
     role = models.CharField(max_length=1000)
     userid = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    # def __str__(self):
-    #     return self.userid.username + ' - '+ self.role
+    def __str__(self):
+        return self.userid.username + ' - '+ self.role

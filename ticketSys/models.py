@@ -1,17 +1,16 @@
 from __future__ import unicode_literals
 from django.core.urlresolvers import reverse
 from django.db import models
-from django.conf import settings
 from django.contrib.auth.models import User
 from rtMembers.models import RTMember
 
 
 class TicketMember(models.Model):  # table for RTMembers inrolled in the ticketSystem
-    memberid = models.ForeignKey(RTMember, on_delete=models.CASCADE)#TODO Need to be a oneToOne relation
+    memberid = models.ForeignKey(RTMember, on_delete=models.CASCADE)  # TODO Need to be a oneToOne relation
     #  the member from RTMembers
 
-    # def __str__(self): #todo this makes a problem in the Admin panel need a solution
-    #     return self.memberid
+    def __str__(self):
+        return self.memberid.__str__()
 
 
 class Ticket(models.Model):
@@ -20,6 +19,12 @@ class Ticket(models.Model):
     state = models.CharField(max_length=1000)  # the current state of the ticket
     title = models.CharField(max_length=1000)  # the title
     content = models.CharField(max_length=1000)  # the content
+
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'pk': self.pk})
+
+    def __str__(self):
+        return self.title
 
 
 class TicketComment(models.Model):

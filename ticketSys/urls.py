@@ -3,9 +3,12 @@ from . import views
 
 app_name = 'ticketSys'
 urlpatterns = [
+    # /tickets/
     url(r'^$', views.dashBoard, name='dashBoard'),
 
-    url(r'^(?P<ticket_id>[0-9]+)/detail/$', views.detail, name='detail'),
-    # url(r'^add/$', views.add, name='add'),
+    # /tickets/123/
+    url(r'^(?P<pk>[0-9]+)/$', views.detail, name='detail'),
 
+    # /tickets/add/
+    url(r'^add/$', views.TicketCreate.as_view(), name='add_ticket'),
 ]
