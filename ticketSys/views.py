@@ -2,14 +2,14 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Ticket
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from rtMembers.models import RTMember
-from ticketSys.models import TicketMember, TicketComment, Ticket
+from ticketSys.models import TicketMember, TicketComment, Ticket, States
 from django.contrib.auth.models import User
 
 
 def detail(request, pk):
     ticket = get_object_or_404(Ticket, pk=pk)
     comms = TicketComment.objects.filter(ticketid_id=pk)
-    context = {'ticket': ticket, 'comments': comms}
+    context = {'ticket': ticket, 'comments': comms, 'states': States.STATES}
     return render(request, 'ticketSys/detail.html', context)
 
 
@@ -20,6 +20,17 @@ def addComment(request, pk):
     ticket = Ticket.objects.get(id=pk)
     comm = TicketComment(memberid=tm, ticketid=ticket, comment=comment)
     comm.save()
+    return redirect('ticketSys:detail', pk)
+
+
+def changeState(request, pk):
+    s = request.POST['state']
+    t = Ticket.objects.get(id=pk)
+    if t.state is not s:
+        # stateChanged(s) #to notify who should be notified by email or whatever
+        t.state=s
+        t.save()
+
     return redirect('ticketSys:detail', pk)
 
 

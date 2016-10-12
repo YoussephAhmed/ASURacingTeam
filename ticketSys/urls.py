@@ -14,4 +14,7 @@ urlpatterns = [
 
     # /tickets/123/addcomment/
     url(r'^(?P<pk>[0-9]+)/addcomment/$', views.addComment, name='add_comment'),
+
+    # /tickets/123/changestate/
+    url(r'^(?P<pk>[0-9]+)/changestate/$', views.changeState, name='change_state'),
 ]
