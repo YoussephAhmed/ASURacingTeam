@@ -6,7 +6,11 @@
 </head>
 <body>
 <h1>Dashboard</h1>
-<h3><a href="{% url 'ticketSys:add_ticket' %}">Add Ticket</a> </h3>
+<h3><a href="{% url 'ticketSys:add_ticket' %}">Add Ticket</a> </h3><br>
+<h3><a href="/">admin</a> </h3><br>
+<h3><a href="{% url 'registeration:login_user' %}">login_user</a> </h3><br>
+<h3><a href="{% url 'registeration:logout_user' %}">logout_user</a> </h3><br>
+<h3><a href="{% url 'registeration:register' %}">registeration</a> </h3><br>
 <h3>{{ tickets.count }}</h3>
 
 <ul>
