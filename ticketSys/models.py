@@ -21,7 +21,7 @@ class Ticket(models.Model):
     content = models.CharField(max_length=1000)  # the content
 
     def get_absolute_url(self):
-        return reverse('detail', kwargs={'pk': self.pk})
+        return reverse('ticketSys:detail', kwargs={'pk': self.pk})
 
     def __str__(self):
         return self.title

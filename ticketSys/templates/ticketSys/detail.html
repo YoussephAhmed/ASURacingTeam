@@ -12,6 +12,12 @@
     about user : {{ ticket.userid }}
 
 </p>
-
+{#<form action="{% url 'delete_song' album.id song.id %}" method="post" style="display: inline;">#}
+{#    {% csrf_token %}#}
+{#    <input type="hidden" name="song_id" value="{{ song.id }}"/>#}
+{#    <button type="submit" class="btn btn-danger btn-xs">#}
+{#        <span class="glyphicon glyphicon-remove"></span>&nbsp; Delete#}
+{#    </button>#}
+{#</form>#}
 </body>
 </html>
