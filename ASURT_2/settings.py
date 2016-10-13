@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'registeration',
     'rtMembers',
     'ticketSys',
     'django.contrib.admin',
