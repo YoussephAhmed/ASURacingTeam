@@ -12,8 +12,7 @@ class States:
 
 
 class TicketMember(models.Model):  # table for RTMembers inrolled in the ticketSystem
-    #  the member from RTMembers
-    memberid = models.ForeignKey(RTMember, on_delete=models.CASCADE)  # TODO Need to be a oneToOne relation
+    memberid = models.OneToOneField(to=RTMember)  # the member from RTMembers
 
     def __str__(self):
         return self.memberid.__str__()
