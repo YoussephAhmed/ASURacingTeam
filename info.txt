@@ -1,0 +1,6 @@
+ASU Racing Team IT Department.
+Ticket System for managerial department ASU Racing Team.
+Created in October 2016.
+
+The outer /ASURacingTeam root directory is just a container for your project.
+Its name doesn’t matter to Django you can rename it to anything you like.

@@ -7,12 +7,21 @@ from django.db.models import Q
 from ticketSys import emailSender
 
 
-def detail(request, pk):
-    ticket = get_object_or_404(Ticket, pk=pk)
-    comms = TicketComment.objects.filter(ticketid_id=pk)
-    context = {'ticket': ticket, 'comments': comms, 'states': States.STATES}
+# detail get called like this
+# detail(request=<HttpRequest object>, question_id='34')
+# question_id='34' from (?P<pk>[0-9]+)/ part of the URL
 
+# it gets all the details about a specified ticket and render it to the template
+def detail(request, pk):
+    # Get the ticket related with the pk from the database or rise an 404 error if it is not found
+    ticket = get_object_or_404(Ticket, pk=pk)
+    # Get the comments related to the Ticket to be displayed in the details template
+    comms = TicketComment.objects.filter(ticketid_id=pk)
+    # States.STATES is to get the tuble in class States that holds all the possible states
+    context = {'ticket': ticket, 'comments': comms, 'states': States.STATES}
+    # Send too the template
     return render(request, 'ticketSys/detail.html', context)
+
 
 
 def addComment(request, pk):
@@ -67,6 +76,7 @@ class TicketCreate(CreateView):
 
 
 # todo only send emails for members in the TicketMembers
+# send emails to the RTMembers with role HR
 def emailHR():
     rtMembers = RTMember.objects.filter(
         Q(role=2) | Q(role=3) | Q(role=4) | Q(role=5))  # the indices of the HR(OD,REC) in ROLES
@@ -77,6 +87,7 @@ def emailHR():
 
 
 # todo only send emails for members in the TicketMembers
+# send emails to the RTMembers with role IT
 def emailIT():
     rtMembers = RTMember.objects.filter(Q(role=0) | Q(role=1))  # the indices of the IT in ROLES
     for rtMember in rtMembers:
@@ -85,6 +96,7 @@ def emailIT():
             emailSender.autoMailSender(receiver.email)
 
 
+# email the member associated with the change depending on his/her role
 def emailRelatedMembers(state, pk):
     # (0, 'WAITING_HR'), (1, 'WAITING_IT'), (2, 'WAITING'), (3, 'SOLVED')
     if state == '0':  # handling state 0 -> HR
@@ -103,16 +115,18 @@ def emailRelatedMembers(state, pk):
 
 
 def dashBoard(request):
-    tickets = Ticket.objects.all()
+    tickets = Ticket.objects.all()  # get all the tickets in the database
     context = {'tickets': tickets}
-    return render(request, 'ticketSys/dashboard.html', context)
+    return render(request, 'ticketSys/dashboard.html', context)  # send it to the template
 
 
-def getTicketMemberFromUser(user):  # returns the TicketMember associated with that User
+# returns the TicketMember associated with that User
+def getTicketMemberFromUser(user):
     rtmember = RTMember.objects.get(userid_id=user.id)
     return TicketMember.objects.get(memberid_id=rtmember.id)
 
 
-def getUserFromRTMember(rtMember):  # returns the User associated with that RTMember
+# returns the User associated with that RTMember
+def getUserFromRTMember(rtMember):
     memberID = rtMember.userid.id
     return User.objects.get(id=memberID)

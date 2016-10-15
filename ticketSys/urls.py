@@ -1,6 +1,10 @@
+# this is a simple mapping between URL patterns(simple regular expressions) to
+# Python functions(views).
+
 from django.conf.urls import url
 from . import views
 
+# to namespace this urlpatterns
 app_name = 'ticketSys'
 urlpatterns = [
     # /tickets/
