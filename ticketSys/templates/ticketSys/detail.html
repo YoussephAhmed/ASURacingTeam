@@ -5,35 +5,38 @@
     <title>Ticket Detail</title>
 </head>
 <body>
+<span><a href="{% url 'ticketSys:dashBoard'  %}"><--Back</a></span>
 <h1> Title: {{ ticket.title }} </h1>
+<h3>Hello, {{ user }}!</h3>
+
+<h5>submitted by: {{ ticket.memberid }}</h5>
+<h5>about user : {{ ticket.userid }}</h5>
+<strong>content : </strong>
 <p>
-    submitted by: {{ ticket.memberid }} <br>
-    content : {{ ticket.content }} <br>
-    about user : {{ ticket.userid }}
-
+    {{ ticket.content }}
 </p>
-
-<h3>Current State: {{ states.ticket.state }}</h3>
 <form action="{% url 'ticketSys:change_state' ticket.id %}" method="post">
     {% csrf_token %}
+    <strong>Current State :</strong>
     <select name="state">
         {% for state in states %}
-            <option value="{{ state.0 }}">{{ state.1 }}</option>
+            <option value="{{ state.0 }}"  {% if state.0 == ticket.state %}
+                    selected style="color: orangered"{% endif %}>{{ state.1 }}</option>
         {% endfor %}
     </select>
     <button type="submit" class="btn btn-default btn-xs">
         change
     </button>
-
 </form>
 <form action="{% url 'ticketSys:add_comment' ticket.id %}" method="post">
     {% csrf_token %}
+    <strong>Add Comment :</strong>
     <input type="text" name="comment"/>
     <button type="submit" class="btn btn-default btn-xs">
         Add
     </button>
 </form>
-
+<strong>Comments :</strong>
 <ul>
     {% for com in comments %}
         <li>{{ com.comment }} - {{ com.memberid }}</li>

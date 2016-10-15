@@ -5,14 +5,14 @@
     <title>Tickets | Dashboard</title>
 </head>
 <body>
-<h1>Dashboard</h1>
-<h3><a href="{% url 'ticketSys:add_ticket' %}">Add Ticket</a> </h3><br>
-<h3><a href="/">admin</a> </h3><br>
-<h3><a href="{% url 'registeration:login_user' %}">login_user</a> </h3><br>
-<h3><a href="{% url 'registeration:logout_user' %}">logout_user</a> </h3><br>
-<h3><a href="{% url 'registeration:register' %}">registeration</a> </h3><br>
-<h3>{{ tickets.count }}</h3>
-
+<h1>Tickets Dashboard</h1>
+<h2>Hello, {{ user }}!</h2>
+<h4><a href="{% url 'ticketSys:add_ticket' %}">Add Ticket</a></h4>
+<span><a href="/admin/">admin</a></span>
+<span><a href="{% url 'registeration:login_user' %}">login_user</a></span>
+<span><a href="{% url 'registeration:logout_user' %}">logout_user</a></span>
+<span><a href="{% url 'registeration:register' %}">registeration</a></span>
+<h3>Total {{ tickets.count }} Tickets :</h3>
 <ul>
     {% for ticket in tickets %}
         <li><a href="{% url 'ticketSys:detail' ticket.id %}">{{ ticket.title }} - {{ ticket.state }}</a></li>
