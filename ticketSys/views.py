@@ -80,7 +80,7 @@ def changeState(request, pk):
 
 # todo don't show RTMembers in the user list
 # todo can search for the user
-class TicketCreate(CreateView):
+class TicketCreate(CreateView):# this class is attached to the file Ticket_form.html and also form_template.html
     model = Ticket
     fields = ['userid', 'title', 'content']  # member id should be taken from the logged in user
 
