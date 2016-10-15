@@ -6,6 +6,7 @@ from . import views
 
 # to namespace this urlpatterns
 app_name = 'ticketSys'
+#todo make a function that checks whether the user is an authenticated ticket member and call it in every url
 urlpatterns = [
     # /tickets/
     url(r'^$', views.dashBoard, name='dashBoard'),
@@ -21,4 +22,7 @@ urlpatterns = [
 
     # /tickets/123/changestate/
     url(r'^(?P<pk>[0-9]+)/changestate/$', views.changeState, name='change_state'),
+
+    # /tickets/login/
+    url(r'^login/', views.login, name='login'),
 ]

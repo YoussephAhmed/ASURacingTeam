@@ -6,6 +6,8 @@ from django.core.urlresolvers import reverse
 from django.db import models
 from django.contrib.auth.models import User
 from rtMembers.models import RTMember
+from django.forms import forms
+from django.forms import ImageField
 
 
 # For  holding all States
@@ -58,3 +60,7 @@ class CommentImg(models.Model):
 class TicketImg(models.Model):
     ticketid = models.ForeignKey(Ticket, on_delete=models.CASCADE)  # Related ticket's image
     url = models.CharField(max_length=1000)  # URL of the image
+
+
+# class CommentImg(models.Model):
+# 	image = FileField(upload_to=None[, max_length=100, **options]
