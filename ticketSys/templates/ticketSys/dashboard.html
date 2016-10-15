@@ -13,6 +13,7 @@
 <span><a href="{% url 'registeration:logout_user' %}">logout_user</a></span>
 <span><a href="{% url 'registeration:register' %}">registeration</a></span>
 <h3>Total {{ tickets.count }} Tickets :</h3>
+
 <ul>
     {% for ticket in tickets %}
         <li><a href="{% url 'ticketSys:detail' ticket.id %}">{{ ticket.title }} - {{ ticket.state }}</a></li>

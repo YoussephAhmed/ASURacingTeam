@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404, redirect
-# from .models import Ticket
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from rtMembers.models import RTMember, Roles
 from ticketSys.models import TicketMember, TicketComment, Ticket, States
@@ -38,6 +37,7 @@ def changeState(request, pk):
         emailRelatedMembers(s, pk)  # to notify who should be notified by email or whatever
         t.state = s
         t.save()
+
     return redirect('ticketSys:detail', pk)
 
 
