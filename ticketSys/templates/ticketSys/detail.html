@@ -5,6 +5,7 @@
     <title>Ticket Detail</title>
 </head>
 <body>
+<!--on clicking go to the URL with the name dashBoard in the app ticketSys-->
 <span><a href="{% url 'ticketSys:dashBoard'  %}"><--Back</a></span>
 <h1> Title: {{ ticket.title }} </h1>
 <h3>Hello, {{ user }}!</h3>
@@ -15,9 +16,12 @@
 <p>
     {{ ticket.content }}
 </p>
+<!--on submitting go to the URL with the name change_state in the app ticketSys-->
 <form action="{% url 'ticketSys:change_state' ticket.id %}" method="post">
     {% csrf_token %}
     <strong>Current State :</strong>
+    <!-- iterate over the states and create an option for each one of them
+    and test which one is related to the ticket and make it selected -->
     <select name="state">
         {% for state in states %}
             <option value="{{ state.0 }}"  {% if state.0 == ticket.state %}
@@ -28,6 +32,8 @@
         change
     </button>
 </form>
+<!-- on submitting go to the URL with the name add_comment in the app ticketSys that needs ticket.id -->
+<!-- and this will run the function associated with the URL which is addComment (views method) -->
 <form action="{% url 'ticketSys:add_comment' ticket.id %}" method="post">
     {% csrf_token %}
     <strong>Add Comment :</strong>
@@ -37,6 +43,7 @@
     </button>
 </form>
 <strong>Comments :</strong>
+<!--iterate over the comments which is an array of TicketComment instances and get the comment charFild from it-->
 <ul>
     {% for com in comments %}
         <li>{{ com.comment }} - {{ com.memberid }}</li>

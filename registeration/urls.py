@@ -1,3 +1,5 @@
+# this is a simple mapping between URL patterns(simple regular expressions) to
+# Python functions(views).
 from django.conf.urls import include, url
 from . import views
 
