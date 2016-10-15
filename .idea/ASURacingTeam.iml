@@ -7,11 +7,13 @@
         <option name="settingsModule" value="ASURT_2/settings.py" />
         <option name="manageScript" value="manage.py" />
         <option name="environment" value="&lt;map/&gt;" />
+        <option name="commandsToSkip" value="" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager">
-    <content url="file:$MODULE_DIR$/../../../../..//$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$" />
+    <content url="file:E:/../..//E:/ASURT/backend/ASURacingTeam" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
@@ -22,5 +24,8 @@
         <option value="$MODULE_DIR$/ticketSys/templates" />
       </list>
     </option>
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
   </component>
 </module>
