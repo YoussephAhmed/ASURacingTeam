@@ -16,7 +16,7 @@ def detail(request, pk):
     return render(request, 'ticketSys/detail.html', context)
 
 
-def addComment(request, pk):
+def addComment(request, pk):#add comment to the ticket detail page
     comment = request.POST['comment']
     user = request.user
     tm = getTicketMemberFromUser(user)
