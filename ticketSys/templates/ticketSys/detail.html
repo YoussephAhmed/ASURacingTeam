@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ticket Detail</title>
-</head>
-<body>
-<!--on clicking go to the URL with the name dashBoard in the app ticketSys-->
+{% extends 'ticketSys/base.html' %}
+
+{% block title %}Ticket Detail{% endblock %}
+
+
+{% block body %}
+
+!--on clicking go to the URL with the name dashBoard in the app ticketSys-->
 <span><a href="{% url 'ticketSys:dashBoard'  %}"><--Back</a></span>
 <h1> Title: {{ ticket.title }} </h1>
 <h3>Hello, {{ user }}!</h3>
@@ -49,5 +49,109 @@
         <li>{{ com.comment }} - {{ com.memberid }}</li>
     {% endfor %}
 </ul>
-</body>
-</html>
+<!-- llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll -->
+
+ <section>
+      <div class="container">
+        <div class="panel panel-default ticket-panel">
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <text class="form-control" type="text" readonly>{{ ticket.title }}</text>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">User </label>
+                <text class="form-control" type="text" disabled>{{ ticket.userid }}</text>
+              </div><div class="form-group">
+                <label for="exampleInputEmail1">Submitted By </label>
+                <text class="form-control" type="text" disabled>{{ ticket.memberid }}</text>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Content</label>
+                <textarea class="form-control" rows="3" readonly>{{ ticket.content }}</textarea>
+              </div>
+              <!--<div class="checkbox">-->
+                <!--<label>-->
+                  <!--<input type="checkbox"> HR Approval-->
+                <!--</label><br>-->
+                <!--<label>-->
+                  <!--<input type="checkbox"> Solved-->
+                <!--</label><br>-->
+                <!--<label>-->
+                  <!--<input type="checkbox"> Closed-->
+                <!--</label>-->
+              <!--</div>-->
+                    <strong>Current State :</strong>
+
+                <select name="state">
+        {% for state in states %}
+            <option value="{{ state.0 }}"  {% if state.0 == ticket.state %}
+                    selected style="color: orangered"{% endif %}>{{ state.1 }}</option>
+        {% endfor %}
+    </select>
+            </form>
+          </div>
+        </div>
+      </div><!-- end panal container-->
+    </section>
+    <div class='container comments'>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Comments</h3>
+        </div>
+        <div class="panel-body">
+          <!-- comment block-->
+            {% for com in comments %}
+
+          <comment>
+            <div class="comments">
+
+              <!-- start comment block -->
+              <div class="comment">
+                <a class="comment-avatar pull-left" href="#"><img src="img/pp.jpg"></a>
+
+                  <div class="comment-text">
+                  <p>{{ com.comment }}</p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <!-- end comment block-->
+            </div>
+
+            <div class="clearfix"></div>
+            {% endfor %}
+            <!-- write a comment section -->
+            <div class="write-comment">
+              <a class="comment-avatar pull-left" href="#"><img src="img/pp.jpg"></a>
+              <div class="comment-text">
+                <!-- <form class="form-inline"> -->
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                  </div>
+                  <button type="submit" class="btn btn-primary">comment</button>
+                <!-- </form> -->
+              </div>
+            </div>
+            <!-- end write a comment section -->
+          </comment>
+        </div>
+      </div>
+    </div><!-- end comments panel-->
+
+    <div class='container '>
+      <div class="ticket-actions">
+        <button type="submit" class="btn btn-primary">Change HR State</button>
+        <button type="button" class="btn btn-warning">Save</button>
+        <button type="button" class="btn btn-success">Mark as Solved</button>
+        <button type="button" class="btn btn-danger">Mark as Closed</button>
+      </div><!-- end ticket-actions -->
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+{% endblock %}

@@ -1,0 +1,16 @@
+.login-panel{
+    margin-top: 40%;
+}
+.ticket-panel{
+  margin-top: 55px;
+}
+.comment-avatar img {
+  width: 40px;
+}
+.comment-text{
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 15px 10px 14px;
+  margin-left: 60px;
+  margin-top: 10px;
+}
