@@ -18,6 +18,7 @@ import smtplib  ##liberary that will be used to send mails to internet machines
 from smtplib import SMTPException
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from ticketSys.models import Ticket
 
 # E-mail address used for sending mails, ##'WILL BE SEEN BY THE RECIPANT'
 fromAddress = 'testasurtit@gmail.com'  ##Enter a sender MAIL ADDRESS as a SECOND ARGUMENT
@@ -28,8 +29,10 @@ massage = ' '  # massage will be sent by the system and will be modefied for eac
 
 
 ##A function sets up the protocole object and sends e-mailes to the server
-def autoMailSender(receiver):
+def autoMailSender(receiver, pk, domain):
+    print('email=' + receiver)
     toAddress = receiver  # E-mail address of the recipant, the example mail will be replaced by different addresses from the mailes file
+
     def sendEmail():
         server = smtplib.SMTP('smtp.gmail.com:587')  # Using Gmail
         server.ehlo()  # Our System's object and the server shaking hand
@@ -38,50 +41,43 @@ def autoMailSender(receiver):
         server.sendmail(fromAddress, toAddress, massage)  # Sending e-mail using the information above
         server.quit()  # Stop Communication with the server
 
-
-
     try:
+        msg = MIMEMultipart('alternative')  # Choose alternative for the mail extension to mix between html and text
+        msg[
+            'Subject'] = "FSUK'17 job vacancy application"  # Set the Subject this method will set it automaticaly to the header
+        msg['From'] = 'HR Department ASURT'  # The From attribute will show in the lable of the E-mail
+        msg['To'] = toAddress  # The To attribute will appear to the recipant
 
-        ##Loop throw each line
+        # Creating the TEXT and the HTML part of the massage
+        text = "Hi this is an Automated mail from ASURT send to"
 
-        try:
-            msg = MIMEMultipart('alternative')  # Choose alternative for the mail extension to mix between html and text
-            msg['Subject'] = "FSUK'17 job vacancy application"  # Set the Subject this method will set it automaticaly to the header
-            msg['From'] = 'HR Department ASURT'  # The From attribute will show in the lable of the E-mail
-            msg['To'] = toAddress  # The To attribute will appear to the recipant
-
-            # Creating the TEXT and the HTML part of the massage
-            text = "Hi this is an Automated mail from ASURT send to"
-            html = """
-            <html>
-              <head></head>
-              <body>
-                <p>
-                   check the ticket System
-                   Best regards,<br>
-                   HR-Department,<br>
-                   ASU Racing Team.<br>
-                </p>
-              </body>
-            </html>
-            """
-            # Define the type of each part
-            part1 = MIMEText(text, 'plain')
-            part2 = MIMEText(html, 'html')
-            msg.attach(part1)
-            msg.attach(part2)
-            massage = msg.as_string()
-            # FINISH Creating massage to send
-            sendEmail()
-        except:
-            print("---ERROR---\nHas not been sent", toAddress)
-
+        ticket = Ticket.objects.get(id=pk)
+        url = domain + ticket.get_absolute_url()
+        html = """
+        <html>
+          <head></head>
+          <body>
+            <p>
+               check the ticket System<br><br>
+                %s <br><br>
+               Best regards,<br>
+               HR-Department,<br>
+               ASU Racing Team.<br>
+            </p>
+          </body>
+        </html>
+        """ % (url)
+        # Define the type of each part
+        part1 = MIMEText(text, 'plain')
+        part2 = MIMEText(html, 'html')
+        msg.attach(part1)
+        msg.attach(part2)
+        massage = msg.as_string()
+        # FINISH Creating massage to send
+        sendEmail()
 
     except smtplib.SMTPException:
-        print ("Error: unable to send email ,\n try Access for less secure apps \nfor GMAIL go to:\nhttps://www.google.com/settings/security/lesssecureapps")
+        print("---ERROR---Has not been sent", toAddress)
+        print(
+            "Error: unable to send email ,\n try Access for less secure apps \nfor GMAIL go to:\nhttps://www.google.com/settings/security/lesssecureapps")
         sys.exit("Error")
-
-
-
-
-
