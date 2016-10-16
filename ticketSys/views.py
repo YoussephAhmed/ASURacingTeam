@@ -29,6 +29,8 @@ def isTicketMember(user):
     return False
 
 
+
+
 # it gets all the details about a specified ticket and render it to the template
 def detail(request, pk):
     if not isAuthTicketMember(request):  # continue if only the user is a TicketMember
@@ -105,25 +107,27 @@ class TicketCreate(CreateView):# this class is attached to the file Ticket_form.
         return super(TicketCreate, self).form_valid(form)
 
 
-# todo only send emails for members in the TicketMembers
+
 # send emails to the RTMembers with role HR
 def emailHR(pk, domain):
     rtMembers = RTMember.objects.filter(
         Q(role=2) | Q(role=3) | Q(role=4) | Q(role=5))  # the indices of the HR(OD,REC) in ROLES
     for rtMember in rtMembers:
-        receiver = getUserFromRTMember(rtMember)
-        if receiver.email is not '' and receiver.email is not None and receiver.email != '':
-            emailSender.autoMailSender(receiver.email, pk, domain)
+        if isTicketMember(rtMember):
+            receiver = getUserFromRTMember(rtMember)
+            if receiver.email is not '' and receiver.email is not None and receiver.email != '':
+                emailSender.autoMailSender(receiver.email, pk, domain)
 
 
-# todo only send emails for members in the TicketMembers
+
 # send emails to the RTMembers with role IT
 def emailIT(pk, domain):
     rtMembers = RTMember.objects.filter(Q(role=0) | Q(role=1))  # the indices of the IT in ROLES
     for rtMember in rtMembers:
-        receiver = getUserFromRTMember(rtMember)
-        if receiver.email is not '' and receiver.email is not None and receiver.email != '':  # todo this lets empty emails get to the function solve that
-            emailSender.autoMailSender(receiver.email, pk, domain)
+        if isTicketMember(rtMember):
+            receiver = getUserFromRTMember(rtMember)
+            if receiver.email is not '' and receiver.email is not None and receiver.email != '':  # todo this lets empty emails get to the function solve that
+                emailSender.autoMailSender(receiver.email, pk, domain)
 
 
 # email the member associated with the change depending on his/her role
@@ -163,6 +167,25 @@ def getUserFromRTMember(rtMember):
     memberID = rtMember.userid.id
     return User.objects.get(id=memberID)
 
+# returns the RTMember related to the user
+def getRTMemberFromUser(request):
+    user = request.user
+    rtMember = RTMember.objects.get(userid=user.id)
+    return rtMember
+
+#todo use this function to enble and disable a button in the system
+def isRTMemberHead(rtMember):
+    if rtMember.role == 1 or rtMember.role == 3 or rtMember.role == 5 or rtMember.role == 7 or rtMember.role == 9:
+        return True
+
+    return False
+
+
+def isTicketMember(rtMember):
+    if TicketMember.objects.get(memberid=rtMember):
+        return True
+    return False
+
 
 #related to Comment Images
 
@@ -171,3 +194,22 @@ def getUserFromRTMember(rtMember):
 # 	mymodel = CommentImg.objects.get(id=1)
 # 	file_content = ContentFile(request.FILES['video'].read())
 # 	mymodel.video.save(request.FILES['video'].name, file_content)
+
+
+def chooseRTMember(request):
+    rtMember = getRTMemberFromUser(request)
+    if isRTMemberHead(rtMember):
+        context = {'users': User.objects.all(), 'roles': Roles.ROLES}
+        return render(request, 'ticketSys/addRTMember.html', context)
+    else:
+        return
+
+
+def addRTMember(request):
+    user = request.POST['user']
+    roleOfRTMember = request.POST['role']
+    normalUser = User.objects.get(id=user)
+    rtMember = RTMember(userid=normalUser, role=roleOfRTMember)
+    rtMember.save()
+    return redirect('ticketSys:choose_RTMember')
+

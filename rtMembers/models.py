@@ -28,6 +28,7 @@ class Roles:
 
 class RTMember(models.Model):
     role = models.IntegerField(choices=Roles.ROLES)
+    #todo must be a one to one relationship
     userid = models.ForeignKey(User, on_delete=models.CASCADE)
 
     # to return data as a string

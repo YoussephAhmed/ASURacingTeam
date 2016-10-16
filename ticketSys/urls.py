@@ -25,4 +25,8 @@ urlpatterns = [
 
     # /tickets/login/
     url(r'^login/', views.login, name='login'),
+    # /chooseRTMember//
+    url(r'^chooseRTMember/', views.chooseRTMember, name='choose_RTMember'),
+    # /RTMemberAdded/
+    url(r'^RTMemberAdded/$', views.addRTMember, name='RTMember_Added'),
 ]
