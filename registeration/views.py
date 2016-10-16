@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Q
 from .forms import UserForm
+from django.contrib.auth.models import User
 
 
 # Create your views here.
@@ -16,7 +17,7 @@ def index(request):
     if not request.user.is_authenticated():
         return render(request, 'registeration/login.html')
     else:
-    	return render(request, 'registeration/index.html')
+    	return render(request, 'registeration/index.html',{'user':User})
 
 
 def logout_user(request):

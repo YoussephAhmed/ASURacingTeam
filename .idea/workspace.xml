@@ -2,75 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6ec2bf2-69d4-4ab8-a727-ae7748cffc36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/2-About-us1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/2-About-us2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/2-About-us3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/3-Achievements1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/3-Achievements2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/3-Achievements3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/3-Achievements4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/3-Achievements5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/3-Achievements6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/3-Achievements7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/3-Achievements8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/3-Achievements9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/4-Ourprojects1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/4-Ourprojects2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/4-Ourprojects3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/4-Ourprojects5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/4-Ourprojects6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/4-Ourprojects7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Contact/Join.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Contact/MAP.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Contact/MSG.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Contact/SM1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Contact/SM2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Contact/SM3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Contact/SM4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Contact/SM5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Contact/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Headers/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Headers/about.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Headers/achievements.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Headers/contact.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Headers/eco.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Headers/formula.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Headers/gallery.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Headers/home.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Headers/hybrid.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Headers/join.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Headers/rov.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Icon/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Icon/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Icon/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Icon/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Icon/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Icon/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Website/FS Logo (Hi-Res).png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Website/Favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Website/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/Website/gallery.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/black.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/car.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/formula.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/logo_white.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/mate.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/shell.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/shell.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/images/sponsors.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/css/style_footer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/css/style_header.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ASURacingTeam.iml" afterPath="$PROJECT_DIR$/.idea/ASURacingTeam.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/templates/registeration/base.html" afterPath="$PROJECT_DIR$/registeration/templates/registeration/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/static/registeration/css/style.css" afterPath="$PROJECT_DIR$/registeration/static/registeration/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/templates/registeration/index.html" afterPath="$PROJECT_DIR$/registeration/templates/registeration/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/templates/registeration/login.html" afterPath="$PROJECT_DIR$/registeration/templates/registeration/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/templates/registeration/reg_form.html" afterPath="$PROJECT_DIR$/registeration/templates/registeration/reg_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/templates/registeration/register.html" afterPath="$PROJECT_DIR$/registeration/templates/registeration/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/views.py" afterPath="$PROJECT_DIR$/registeration/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketSys/static/ticketSys/css/style.css" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html" afterPath="$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html" />
     </list>
     <ignored path="ASURacingTeam.iws" />
@@ -95,8 +35,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketSys/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="47" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="47" />
+            <state relative-caret-position="567">
+              <caret line="88" column="43" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
@@ -104,31 +44,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html">
+      <file leaf-file-name="reg_form.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/reg_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1379">
-              <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+            <state relative-caret-position="84">
+              <caret line="4" column="37" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/base.html">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/registeration/static/registeration/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="189">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/registeration/static/registeration/css/bootstrap.css">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="224" column="7" selection-start-line="224" selection-start-column="7" selection-end-line="224" selection-end-column="7" />
+            <state relative-caret-position="168">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -137,32 +87,11 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="104" column="12" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
+            <state relative-caret-position="355">
+              <caret line="95" column="34" selection-start-line="95" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#option#0;n#select#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#option#0;n#select#0;n#form#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#option#0;n#select#0;n#form#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ticketSys/static/ticketSys/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form_template.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/form_template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -170,8 +99,40 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="273">
+              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticketSys/static/ticketSys/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/registeration/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/registeration/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -190,6 +151,12 @@
         <option value="$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html" />
         <option value="$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html" />
         <option value="$PROJECT_DIR$/ticketSys/static/ticketSys/css/style.css" />
+        <option value="$PROJECT_DIR$/registeration/templates/registeration/reg_form.html" />
+        <option value="$PROJECT_DIR$/registeration/templates/registeration/register.html" />
+        <option value="$PROJECT_DIR$/registeration/templates/registeration/login.html" />
+        <option value="$PROJECT_DIR$/registeration/static/registeration/css/style.css" />
+        <option value="$PROJECT_DIR$/registeration/views.py" />
+        <option value="$PROJECT_DIR$/registeration/templates/registeration/index.html" />
       </list>
     </option>
   </component>
@@ -230,6 +197,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -444,7 +412,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -698,30 +665,53 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ticketSys/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:E:/../..//E:/ASURT/backend/ASURacingTeam/ticketSys/views.py" />
-    <entry file="file://$PROJECT_DIR$/ticketSys/static/ticketSys/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketSys/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="231">
           <caret line="17" column="47" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="47" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/static/registeration/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4704">
+          <caret line="224" column="7" selection-start-line="224" selection-start-column="7" selection-end-line="224" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2184">
+          <caret line="104" column="12" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#option#0;n#select#0;n#form#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/static/ticketSys/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -741,45 +731,146 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:E:/../..//E:/ASURT/backend/ASURacingTeam/ticketSys/views.py" />
+    <entry file="file://$PROJECT_DIR$/ticketSys/static/ticketSys/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/form_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/registeration/static/registeration/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
+        <state relative-caret-position="4704">
           <caret line="224" column="7" selection-start-line="224" selection-start-column="7" selection-end-line="224" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/base.html">
+    <entry file="file://$PROJECT_DIR$/ticketSys/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="186">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1379">
-          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+        <state relative-caret-position="21">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html">
+    <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="104" column="12" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
+        <state relative-caret-position="651">
+          <caret line="33" column="119" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="88" column="43" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
           <folding>
-            <element signature="n#style#0;n#option#0;n#select#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#option#0;n#select#0;n#form#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketSys/static/ticketSys/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="294">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/reg_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/static/registeration/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="95" column="34" selection-start-line="95" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#option#0;n#select#0;n#form#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>

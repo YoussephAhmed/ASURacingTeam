@@ -1,3 +1,10 @@
 .login-panel{
     margin-top: 40%;
+}.Reg-panel{
+    margin-top: 15%;
+}.logged-panel{
+    margin-top: 15%;
+}
+.error{
+color:red;
 }

@@ -1,61 +1,24 @@
 {% extends 'ticketSys/base.html' %}
+    {% load staticfiles %}
 
 {% block title %}Ticket Detail{% endblock %}
 
 
 {% block body %}
+<div class="container ticketView-panel">
+<!--on clicking go to the URL with the name dashBoard in the app ticketSys-->
+    <a href="{% url 'ticketSys:dashBoard'  %}"><button class="btn btn-primary">Back To Dashboard</button></a>
+<!--<span><a href="{% url 'ticketSys:dashBoard'  %}"><&#45;&#45;Back</a></span>-->
+<h3>  Hello, {{ user }}!</h3>
 
-!--on clicking go to the URL with the name dashBoard in the app ticketSys-->
-<span><a href="{% url 'ticketSys:dashBoard'  %}"><--Back</a></span>
-<h1> Title: {{ ticket.title }} </h1>
-<h3>Hello, {{ user }}!</h3>
 
-<h5>submitted by: {{ ticket.memberid }}</h5>
-<h5>about user : {{ ticket.userid }}</h5>
-<strong>content : </strong>
-<p>
-    {{ ticket.content }}
-</p>
-<!--on submitting go to the URL with the name change_state in the app ticketSys-->
-<form action="{% url 'ticketSys:change_state' ticket.id %}" method="post">
-    {% csrf_token %}
-    <strong>Current State :</strong>
-    <!-- iterate over the states and create an option for each one of them
-    and test which one is related to the ticket and make it selected -->
-    <select name="state">
-        {% for state in states %}
-            <option value="{{ state.0 }}"  {% if state.0 == ticket.state %}
-                    selected style="color: orangered"{% endif %}>{{ state.1 }}</option>
-        {% endfor %}
-    </select>
-    <button type="submit" class="btn btn-default btn-xs">
-        change
-    </button>
-</form>
-<!-- on submitting go to the URL with the name add_comment in the app ticketSys that needs ticket.id -->
-<!-- and this will run the function associated with the URL which is addComment (views method) -->
-<form action="{% url 'ticketSys:add_comment' ticket.id %}" method="post">
-    {% csrf_token %}
-    <strong>Add Comment :</strong>
-    <input type="text" name="comment"/>
-    <button type="submit" class="btn btn-default btn-xs">
-        Add
-    </button>
-</form>
-<strong>Comments :</strong>
-<!--iterate over the comments which is an array of TicketComment instances and get the comment charFild from it-->
-<ul>
-    {% for com in comments %}
-        <li>{{ com.comment }} - {{ com.memberid }}</li>
-    {% endfor %}
-</ul>
-<!-- llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll -->
 
  <section>
       <div class="container">
         <div class="panel panel-default ticket-panel">
           <div class="panel-body">
-            <form>
+            <form action="{% url 'ticketSys:change_state' ticket.id %}" method="post">
+                {% csrf_token %}
               <div class="form-group">
                 <label for="exampleInputEmail1">Title</label>
                 <text class="form-control" type="text" readonly>{{ ticket.title }}</text>
@@ -90,6 +53,7 @@
                     selected style="color: orangered"{% endif %}>{{ state.1 }}</option>
         {% endfor %}
     </select>
+        <button type="submit" class="btn btn-primary">Change State</button>
             </form>
           </div>
         </div>
@@ -109,7 +73,8 @@
 
               <!-- start comment block -->
               <div class="comment">
-                <a class="comment-avatar pull-left" href="#"><img src="img/pp.jpg"></a>
+                  <p><strong>{{ com.memberid }}</strong></p>
+                <a class="comment-avatar pull-left" href="#"><img src="{% static 'ticketSys/images/pp.jpg' %}"></a>
 
                   <div class="comment-text">
                   <p>{{ com.comment }}</p>
@@ -120,17 +85,21 @@
             </div>
 
             <div class="clearfix"></div>
+
             {% endfor %}
             <!-- write a comment section -->
-            <div class="write-comment">
-              <a class="comment-avatar pull-left" href="#"><img src="img/pp.jpg"></a>
-              <div class="comment-text">
+            <!--<div class="write-comment">-->
+              <!--<a class="comment-avatar pull-left" href="#"><img src="img/pp.jpg"></a>-->
+              <!--<div class="comment-text">-->
                 <!-- <form class="form-inline"> -->
+                <form action="{% url 'ticketSys:add_comment' ticket.id %}" method="post">
+                    {% csrf_token %}
                   <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                    <input type="text" class="form-control" id="comment" placeholder="Jane Doe" name="comment"><!--ASHOUR: adjust placeholder -->
                   </div>
                   <button type="submit" class="btn btn-primary">comment</button>
-                <!-- </form> -->
+                </form>
+                    <!-- </form> -->
               </div>
             </div>
             <!-- end write a comment section -->
@@ -138,15 +107,15 @@
         </div>
       </div>
     </div><!-- end comments panel-->
-
-    <div class='container '>
-      <div class="ticket-actions">
-        <button type="submit" class="btn btn-primary">Change HR State</button>
-        <button type="button" class="btn btn-warning">Save</button>
-        <button type="button" class="btn btn-success">Mark as Solved</button>
-        <button type="button" class="btn btn-danger">Mark as Closed</button>
-      </div><!-- end ticket-actions -->
-    </div>
+</div>
+    <!--<div class='container '>-->
+      <!--<div class="ticket-actions">-->
+        <!--<button type="submit" class="btn btn-primary">Change HR State</button>-->
+        <!--<button type="button" class="btn btn-warning">Save</button>-->
+        <!--<button type="button" class="btn btn-success">Mark as Solved</button>-->
+        <!--<button type="button" class="btn btn-danger">Mark as Closed</button>-->
+      <!--</div>&lt;!&ndash; end ticket-actions &ndash;&gt;-->
+    <!--</div>-->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -154,4 +123,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
+
 {% endblock %}
