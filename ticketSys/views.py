@@ -82,6 +82,8 @@ def changeState(request, pk):
 
 # todo don't show RTMembers in the user list
 # todo can search for the user
+
+# TODO change to function and fix error
 class TicketCreate(CreateView):# this class is attached to the file Ticket_form.html and also form_template.html
     model = Ticket
     fields = ['userid', 'title', 'content']  # member id should be taken from the logged in user
@@ -113,7 +115,7 @@ def emailHR(pk, domain):
     rtMembers = RTMember.objects.filter(
         Q(role=2) | Q(role=3) | Q(role=4) | Q(role=5))  # the indices of the HR(OD,REC) in ROLES
     for rtMember in rtMembers:
-        if isTicketMember(rtMember):
+        if isTicketMember(rtMember.userid):
             receiver = getUserFromRTMember(rtMember)
             if receiver.email is not '' and receiver.email is not None and receiver.email != '':
                 emailSender.autoMailSender(receiver.email, pk, domain)
@@ -124,7 +126,7 @@ def emailHR(pk, domain):
 def emailIT(pk, domain):
     rtMembers = RTMember.objects.filter(Q(role=0) | Q(role=1))  # the indices of the IT in ROLES
     for rtMember in rtMembers:
-        if isTicketMember(rtMember):
+        if isTicketMember(rtMember.userid):
             receiver = getUserFromRTMember(rtMember)
             if receiver.email is not '' and receiver.email is not None and receiver.email != '':  # todo this lets empty emails get to the function solve that
                 emailSender.autoMailSender(receiver.email, pk, domain)
@@ -181,11 +183,6 @@ def isRTMemberHead(rtMember):
     return False
 
 
-def isTicketMember(rtMember):
-    if TicketMember.objects.get(memberid=rtMember):
-        return True
-    return False
-
 
 #related to Comment Images
 
@@ -202,7 +199,7 @@ def chooseRTMember(request):
         context = {'users': User.objects.all(), 'roles': Roles.ROLES}
         return render(request, 'ticketSys/addRTMember.html', context)
     else:
-        return
+        return redirect('registeration:index')
 
 
 def addRTMember(request):
