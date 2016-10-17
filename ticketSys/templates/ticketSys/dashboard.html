@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tickets | Dashboard</title>
-</head>
-<body>
+{% extends 'ticketSys/base.html' %}
+    {% load staticfiles %}
+
+{% block title %}Tickets Dashboard{% endblock %}
+
+{% block head %}
+  	<link href="{% static 'ticketSys/css/Dashboard.css' %}" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
 <h1>Tickets Dashboard</h1>
 <h2>Hello, {{ user }}!</h2>
 <h4><a href="{% url 'ticketSys:add_ticket' %}">Add Ticket</a></h4>
@@ -15,9 +18,66 @@
 <h3>Total {{ tickets.count }} Tickets :</h3>
 
 <ul>
-    {% for ticket in tickets %} <!-- display the state in a string-->
-        <li><a href="{% url 'ticketSys:detail' ticket.id %}">{{ ticket }}</a></li>
+    {% for ticket in tickets %} <!--todo display the state in a string-->
+        <li><a href="{% url 'ticketSys:detail' ticket.id %}">{{ ticket.title }} - {{ ticket.state }}</a></li>
     {% endfor %}
 </ul>
-</body>
-</html>
+
+
+<!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+
+
+<div class="container">
+	<div class="row">
+
+		<section class="content">
+			<h1>Tickets Dashboard</h1>
+			<div class="col-md-8 col-md-offset-2">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="pull-right">
+							<div class="btn-group">
+								<a href="{% url 'ticketSys:add_ticket' %}"><button type="button" class="btn btn-success btn-filter">Add Ticket</button></a>
+								<br>
+								<br>
+                                <!--<button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Pendiente</button>-->
+								<!--<button type="button" class="btn btn-danger btn-filter" data-target="cancelado">Cancelado</button>-->
+								<!--<button type="button" class="btn btn-default btn-filter" data-target="all">Todos</button>-->
+							</div>
+						</div>
+						<div class="table-container">
+							<table class="table table-filter">
+								<tbody>
+                                {% for ticket in tickets %}
+									<tr>
+										<td>
+											<div class="media">
+                                                <a class="comment-avatar pull-left" href="{% url 'ticketSys:detail' ticket.id %}"><img src="{% static 'ticketSys/images/pp.jpg' %}"></a>
+                                                <div class="media-body">
+													<h4 class="title">
+                                                        <a href="{% url 'ticketSys:detail' ticket.id %}">{{ ticket.memberid }}: {{ ticket.title }}</a>
+                                                        <span class="pull-right pagado">{{ ticket.state }}</span>
+													</h4>
+													<p class="summary">{{ ticket.content }}</p>
+												</div>
+											</div>
+										</td>
+									</tr>
+                                    {% endfor %}
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+	</div>
+</div>
+
+
+<script src="{% static 'ticketSys/js/Dashboard_Script.js' %}"></script>
+
+{% endblock %}
