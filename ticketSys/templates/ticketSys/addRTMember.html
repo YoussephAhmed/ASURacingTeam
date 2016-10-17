@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add RTMember</title>
+</head>
+<body>
+<form action="{% url 'ticketSys:RTMember_Added'%}" method="post">
+{% csrf_token %}
+<select name="user">
+<option>-- select an option -- </option>
+        {% for user in users %}
+            <option value="{{ user.id }}"
+                    >{{ user }}</option>
+
+        {% endfor %}
+    </select>
+ <span>Users</span>
+<select name="role">
+<option>-- select an option -- </option>
+        {% for role in roles%}
+            <option value="{{ role.0 }}"
+                    >{{ role.1 }}</option>
+
+        {% endfor %}
+    </select>
+<span>Roles</span>
+        <button type="submit" class="btn btn-primary">Add RTMember</button>
+</form>
+</body>
+</html>
