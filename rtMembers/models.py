@@ -28,9 +28,11 @@ class Roles:
 
 class RTMember(models.Model):
     role = models.IntegerField(choices=Roles.ROLES)
-    #todo must be a one to one relationship
-    userid = models.ForeignKey(User, on_delete=models.CASCADE)
+    #  must be a one to one relationship
+    # userid = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(to=User, related_name='rtMember')
 
     # to return data as a string
     def __str__(self):
-        return self.userid.username + ' - ' + str(self.role)
+
+        return self.user.username + ' - ' + Roles.ROLES[self.role][1]
