@@ -15,8 +15,8 @@
 <h3>Total {{ tickets.count }} Tickets :</h3>
 
 <ul>
-    {% for ticket in tickets %} <!--todo display the state in a string-->
-        <li><a href="{% url 'ticketSys:detail' ticket.id %}">{{ ticket.title }} - {{ ticket.state }}</a></li>
+    {% for ticket in tickets %} <!-- display the state in a string-->
+        <li><a href="{% url 'ticketSys:detail' ticket.id %}">{{ ticket }}</a></li>
     {% endfor %}
 </ul>
 </body>

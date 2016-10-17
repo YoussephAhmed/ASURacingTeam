@@ -29,8 +29,6 @@ def isTicketMember(user):
     return False
 
 
-
-
 # it gets all the details about a specified ticket and render it to the template
 def detail(request, pk):
     if not isAuthTicketMember(request):  # continue if only the user is a TicketMember
@@ -38,11 +36,10 @@ def detail(request, pk):
     # Get the ticket related with the pk from the database or rise an 404 error if it is not found
     ticket = get_object_or_404(Ticket, pk=pk)
     # Get the comments related to the Ticket to be displayed in the details template
-    comms = TicketComment.objects.filter(ticketid_id=pk)
+    comms = TicketComment.objects.filter(ticket_id=pk)
     # States.STATES is to get the tuble in class States that holds all the possible states
     context = {'ticket': ticket, 'comments': comms, 'states': States.STATES}
-    # Send too the template
-    return render(request, 'ticketSys/detail.html', context)
+    return render(request, 'ticketSys/detail.html', context)  # Send to the template
 
 
 def addComment(request, pk):  # add comment to the ticket detail page
@@ -52,7 +49,7 @@ def addComment(request, pk):  # add comment to the ticket detail page
     user = request.user
     tm = getTicketMemberFromUser(user)
     ticket = Ticket.objects.get(id=pk)
-    comm = TicketComment(memberid=tm, ticketid=ticket, comment=comment)
+    comm = TicketComment(ticketMember=tm, ticket=ticket, comment=comment)
     comm.save()
     return redirect('ticketSys:detail', pk)
 
@@ -78,36 +75,50 @@ def changeState(request, pk):
 
 #  login form
 #  data about the ticket in the mail
-# todo add image
+#  add image
+#  don't show RTMembers in the user list
+#  can search for the user
+#  change to function and fix error
+def addTicket(request):
+    if not isAuthTicketMember(request):  # continue if only the user is a TicketMember
+        return redirect('registeration:index')
 
-# todo don't show RTMembers in the user list
-# todo can search for the user
+    if request.method == "GET":  # the user is entering the addTicket page, just view the page
+        users = User.objects.filter(rtMember=None)  # get all users that are not RTMembers
+        context = {'users': users}
+        return render(request, 'ticketSys/addTicket.html', context)
 
-# TODO change to function and fix error
-class TicketCreate(CreateView):# this class is attached to the file Ticket_form.html and also form_template.html
-    model = Ticket
-    fields = ['userid', 'title', 'content']  # member id should be taken from the logged in user
-
-    def form_valid(self, form):
-        ticket = form.save(commit=False)
-        domain = self.request.META['HTTP_HOST']
-
+    else:  # the user has submitted the form, validate the data
         try:
-            self.request.POST['needhr']
-            # Need HR approval
-            ticket.state = 0
-            emailHR(ticket.id, domain)
-        except:  # Does not need HR approval
-            ticket.state = 1
-            emailIT(ticket.id, domain)
+            ticketMember = getTicketMemberFromUser(request.user)
+            userid = request.POST['selectedUser']
+            user = User.objects.get(id=userid)
+            try:  # fetch the state of the ticket
+                request.POST['needhr']
+                # Need HR approval
+                state = 0
+            except:  # Does not need HR approval
+                state = 1
 
-        user = self.request.user
-        try:
-            ticket.memberid = getTicketMemberFromUser(user)
+            title = request.POST['title']
+            content = request.POST['content']
+            if len(title) < 2 or len(content) < 2:  # validate that the title and content are not empty
+                return redirect('ticketSys:add_ticket')
+            ticket = Ticket(ticketMember=ticketMember, user=user, state=state, title=title, content=content)
+            ticket.save()
+            domain = request.META['HTTP_HOST']
+            try:  # send emails to the concerned ticketMembers
+                if state == 0:
+                    emailHR(ticket.id, domain)
+                else:
+                    emailIT(ticket.id, domain)
+            except:
+                print('Error while emailing')
+
         except:
-            return redirect('ticketSys:dashBoard')
-        return super(TicketCreate, self).form_valid(form)
+            redirect('ticketSys:add_ticket')
 
+    return redirect('ticketSys:dashBoard')
 
 
 # send emails to the RTMembers with role HR
@@ -115,20 +126,19 @@ def emailHR(pk, domain):
     rtMembers = RTMember.objects.filter(
         Q(role=2) | Q(role=3) | Q(role=4) | Q(role=5))  # the indices of the HR(OD,REC) in ROLES
     for rtMember in rtMembers:
-        if isTicketMember(rtMember.userid):
+        if isTicketMember(rtMember.user):
             receiver = getUserFromRTMember(rtMember)
             if receiver.email is not '' and receiver.email is not None and receiver.email != '':
                 emailSender.autoMailSender(receiver.email, pk, domain)
-
 
 
 # send emails to the RTMembers with role IT
 def emailIT(pk, domain):
     rtMembers = RTMember.objects.filter(Q(role=0) | Q(role=1))  # the indices of the IT in ROLES
     for rtMember in rtMembers:
-        if isTicketMember(rtMember.userid):
+        if isTicketMember(rtMember.user):
             receiver = getUserFromRTMember(rtMember)
-            if receiver.email is not '' and receiver.email is not None and receiver.email != '':  # todo this lets empty emails get to the function solve that
+            if receiver.email is not '' and receiver.email is not None and receiver.email != '':  # this lets empty emails get to the function solve that
                 emailSender.autoMailSender(receiver.email, pk, domain)
 
 
@@ -143,8 +153,8 @@ def emailRelatedMembers(state, pk, domain):
 
     elif state == '2':  # send email to the ticket starter
         ticket = Ticket.objects.get(id=pk)
-        ticketmember = TicketMember.objects.get(id=ticket.memberid_id)
-        rtMember = RTMember.objects.get(id=ticketmember.memberid_id)
+        ticketmember = TicketMember.objects.get(id=ticket.ticketMember_id)
+        rtMember = RTMember.objects.get(id=ticketmember.rtMember_id)
         receiver = getUserFromRTMember(rtMember)
         if receiver.email is not '' and receiver.email is not None and receiver.email != '':
             emailSender.autoMailSender(receiver.email, pk, domain)
@@ -160,22 +170,24 @@ def dashBoard(request):
 
 # returns the TicketMember associated with that User
 def getTicketMemberFromUser(user):
-    rtmember = RTMember.objects.get(userid_id=user.id)
-    return TicketMember.objects.get(memberid_id=rtmember.id)
+    rtmember = RTMember.objects.get(user=user)
+    return TicketMember.objects.get(rtMember=rtmember)
 
 
 # returns the User associated with that RTMember
 def getUserFromRTMember(rtMember):
-    memberID = rtMember.userid.id
+    memberID = rtMember.user.id
     return User.objects.get(id=memberID)
+
 
 # returns the RTMember related to the user
 def getRTMemberFromUser(request):
     user = request.user
-    rtMember = RTMember.objects.get(userid=user.id)
+    rtMember = RTMember.objects.get(user=user.id)
     return rtMember
 
-#todo use this function to enble and disable a button in the system
+
+#  use this function to enble and disable a button in the system
 def isRTMemberHead(rtMember):
     if rtMember.role == 1 or rtMember.role == 3 or rtMember.role == 5 or rtMember.role == 7 or rtMember.role == 9:
         return True
@@ -183,8 +195,7 @@ def isRTMemberHead(rtMember):
     return False
 
 
-
-#related to Comment Images
+# related to Comment Images
 
 #
 # def save_file(request):
@@ -206,7 +217,6 @@ def addRTMember(request):
     user = request.POST['user']
     roleOfRTMember = request.POST['role']
     normalUser = User.objects.get(id=user)
-    rtMember = RTMember(userid=normalUser, role=roleOfRTMember)
+    rtMember = RTMember(user=normalUser, role=roleOfRTMember)
     rtMember.save()
     return redirect('ticketSys:choose_RTMember')
-
