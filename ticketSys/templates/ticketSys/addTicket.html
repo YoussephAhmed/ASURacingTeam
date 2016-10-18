@@ -12,7 +12,7 @@
     {% csrf_token %}
     <label>The Title : </label> <input type="text" name="title"><br>
     <label>Selsect User : </label>
-    <select name="selectedUser"><!--Jst testing that the users sent are the correct ones -->
+    <select name="selectedUser">
         {% for user in users %}
             <option value="{{ user.id }}">{{ user }}</option>
         {% endfor %}
