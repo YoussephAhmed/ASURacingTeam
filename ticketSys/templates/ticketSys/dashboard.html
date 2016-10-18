@@ -8,20 +8,20 @@
 {% endblock %}
 
 {% block body %}
-<h1>Tickets Dashboard</h1>
-<h2>Hello, {{ user }}!</h2>
-<h4><a href="{% url 'ticketSys:add_ticket' %}">Add Ticket</a></h4>
-<span><a href="/admin/">admin</a></span>
-<span><a href="{% url 'registeration:login_user' %}">login_user</a></span>
-<span><a href="{% url 'registeration:logout_user' %}">logout_user</a></span>
-<span><a href="{% url 'registeration:register' %}">registeration</a></span>
-<h3>Total {{ tickets.count }} Tickets :</h3>
+<!--<h1>Tickets Dashboard</h1>-->
+<!--<h2>Hello, {{ user }}!</h2>-->
+<!--<h4><a href="{% url 'ticketSys:add_ticket' %}">Add Ticket</a></h4>-->
+<!--<span><a href="/admin/">admin</a></span>-->
+<!--<span><a href="{% url 'registeration:login_user' %}">login_user</a></span>-->
+<!--<span><a href="{% url 'registeration:logout_user' %}">logout_user</a></span>-->
+<!--<span><a href="{% url 'registeration:register' %}">registeration</a></span>-->
+<!--<h3>Total {{ tickets.count }} Tickets :</h3>-->
 
-<ul>
-    {% for ticket in tickets %} <!--todo display the state in a string-->
-        <li><a href="{% url 'ticketSys:detail' ticket.id %}">{{ ticket.title }} - {{ ticket.state }}</a></li>
-    {% endfor %}
-</ul>
+<!--<ul>-->
+    <!--{% for ticket in tickets %} &lt;!&ndash;todo display the state in a string&ndash;&gt;-->
+        <!--<li><a href="{% url 'ticketSys:detail' ticket.id %}">{{ ticket.title }} - {{ ticket.state }}</a></li>-->
+    <!--{% endfor %}-->
+<!--</ul>-->
 
 
 <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
@@ -55,7 +55,7 @@
                                                 <a class="comment-avatar pull-left" href="{% url 'ticketSys:detail' ticket.id %}"><img src="{% static 'ticketSys/images/pp.jpg' %}"></a>
                                                 <div class="media-body">
 													<h4 class="title">
-                                                        <a href="{% url 'ticketSys:detail' ticket.id %}">{{ ticket.memberid }}: {{ ticket.title }}</a>
+                                                        <a href="{% url 'ticketSys:detail' ticket.id %}">{{ ticket.ticketMember }}: {{ ticket.title }}</a>
                                                         <span class="pull-right pagado">{{ ticket.state }}</span>
 													</h4>
 													<p class="summary">{{ ticket.content }}</p>
