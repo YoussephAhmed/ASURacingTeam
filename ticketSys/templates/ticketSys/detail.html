@@ -5,12 +5,12 @@
 
 
 {% block body %}
-<div class="container ticketView-panel">
+<div class="container">
+
+<!--<span><a href="{% url 'ticketSys:dashBoard'  %}"><&#45;&#45;Back</a></span>-->
+<h2>  Hello, {{ user }}!</h2>
 <!--on clicking go to the URL with the name dashBoard in the app ticketSys-->
     <a href="{% url 'ticketSys:dashBoard'  %}"><button class="btn btn-primary">Back To Dashboard</button></a>
-<!--<span><a href="{% url 'ticketSys:dashBoard'  %}"><&#45;&#45;Back</a></span>-->
-<h3>  Hello, {{ user }}!</h3>
-
 
 
  <section>

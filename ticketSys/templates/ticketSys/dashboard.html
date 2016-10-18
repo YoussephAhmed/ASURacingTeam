@@ -4,7 +4,7 @@
 {% block title %}Tickets Dashboard{% endblock %}
 
 {% block head %}
-  	<link href="{% static 'ticketSys/css/Dashboard.css' %}" type="text/css" rel="stylesheet">
+  	<link href="{% static 'ticketSys/css/Dashboard_Style.css' %}" type="text/css" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
@@ -48,7 +48,10 @@
 						<div class="table-container">
 							<table class="table table-filter">
 								<tbody>
+																	<div class="container">
+
                                 {% for ticket in tickets %}
+									<div class="row">
 									<tr>
 										<td>
 											<div class="media">
@@ -58,14 +61,13 @@
                                                         <a href="{% url 'ticketSys:detail' ticket.id %}">{{ ticket.ticketMember }}: {{ ticket.title }}</a>
                                                         <span class="pull-right pagado">{{ ticket.state }}</span>
 													</h4>
-													<p class="summary">{{ ticket.content }}</p>
+													<textarea class="form-control" readonly rows="2">{{ ticket.content }}</textarea>
 												</div>
 											</div>
 										</td>
-									</tr>
+									</tr></div>
                                     {% endfor %}
-
-								</tbody>
+							</tbody>
 							</table>
 						</div>
 					</div>

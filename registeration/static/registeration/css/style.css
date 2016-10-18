@@ -5,6 +5,11 @@
 }.logged-panel{
     margin-top: 15%;
 }
+
+.rtPanel{
+    margin-top: 5%;
+
+}
 .error{
 color:red;
 }
