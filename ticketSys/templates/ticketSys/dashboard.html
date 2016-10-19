@@ -59,9 +59,9 @@
                                                 <div class="media-body">
 													<h4 class="title">
                                                         <a href="{% url 'ticketSys:detail' ticket.id %}">{{ ticket.ticketMember }}: {{ ticket.title }}</a>
-                                                        <span class="pull-right pagado">{{ ticket.state }}</span>
+                                                        <span class="pull-right pagado state"><strong>{{ ticket.get_state_display }}</strong></span>
 													</h4>
-													<textarea class="form-control" readonly rows="2">{{ ticket.content }}</textarea>
+													<!--<textarea class="form-control" readonly rows="2">{{ ticket.content }}</textarea>-->
 												</div>
 											</div>
 										</td>
