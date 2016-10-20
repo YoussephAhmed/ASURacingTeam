@@ -34,18 +34,19 @@
     </div>
     <div>
      <ul class="nav navbar-nav nav2">
-        <li><a ng-href="/about">ABOUT US</a></li>
-        <li><a  ng-href="/achievements">ACHIEVEMENTS</a></li>
+       <li><a href="http://asuracingteam.org/about">ABOUT US</a></li>
+        <li><a  href="http://asuracingteam.org/achievements">ACHIEVEMENTS</a></li>
         <li class="navbar-dropdown-toggle">
-          <a  href="">OUR PROJECTS</a></li>
-        <!-- <li ng-if="root.me"><a ng-class="{active: vm.isActive('/apply')}" ng-href="/apply">APPLY</a></li> -->
-        <li ng-if="!root.me" class="navbar-dropdown-toggle">
-          <a  href="">JOIN US</a></li>
-        <li ng-if="root.me"><a  href="/profile">PROFILE</a></li>
+          <!--<a  href="">OUR PROJECTS</a></li>-->
+        <!--&lt;!&ndash; <li ng-if="root.me"><a ng-class="{active: vm.isActive('/apply')}" ng-href="/apply">APPLY</a></li> &ndash;&gt;-->
+        <!--<li ng-if="!root.me" class="navbar-dropdown-toggle">-->
+          <!--<a  href="">JOIN US</a></li>-->
+        <li ng-if="root.me"><a  href="http://asuracingteam.org/profile">PROFILE</a></li>
         <!-- <li ng-if="!root.me"><a ng-class="{active: vm.isActive('/user/login')}" href="/user/login">LOGIN</a></li> -->
-        <li ng-if="root.me"><a ng-click="vm.logout()" href="">LOGOUT</a></li>
-        <li><a  ng-href="/gallery">GALLERY</a></li>
-        <li><a  ng-href="/contact">CONTACT US</a></li>
+        <li><a  href="http://asuracingteam.org/gallery">GALLERY</a></li>
+        <li><a  href="http://asuracingteam.org/contact">CONTACT US</a></li>
+        <li><a  href="{% url 'ticketSys:dashBoard'  %}">TICKET SYSTEM</a></li>
+         <li ng-if="root.me"><a ng-click="vm.logout()" href="{% url 'registeration:logout_user' %}">LOGOUT</a></li>
       </ul>
       </div>
     </div>
@@ -95,20 +96,20 @@
             </div>
             <div class="col-sm-7 col-xs-11  text-right footer1 forh">
             <ul class="ulm">
-            	<li><a href="" class="lie"> ABOUT US </li>
-            	<li><a href="" class="lie" style="padding-right:5px"> ACHIEVEMENTS </li>
-            	<li><a href="" style="color:white"> OUR PROJECTS <br>
-            	<ul class="uls">
-            		<li><a href="" style="color:white"> FORMULA STUDENT TEAM</li>
-            		<li><a href="" style="color:white"> ECO GASOLINE TEAM</li>
-            		<li><a href="" style="color:white"> HYBRID ELECTRIC TEAM </li>
-            		<li><a href="" style="color:white"> ROV TEAM </li>
+            	<!--<li><a href="" class="lie"> ABOUT US </li>-->
+            	<!--<li><a href="" class="lie" style="padding-right:5px"> ACHIEVEMENTS </li>-->
+            	<!--<li><a href="" style="color:white"> OUR PROJECTS <br>-->
+            	<!--<ul class="uls">-->
+            		<!--<li><a href="" style="color:white"> FORMULA STUDENT TEAM</li>-->
+            		<!--<li><a href="" style="color:white"> ECO GASOLINE TEAM</li>-->
+            		<!--<li><a href="" style="color:white"> HYBRID ELECTRIC TEAM </li>-->
+            		<!--<li><a href="" style="color:white"> ROV TEAM </li>-->
 
-            	</ul>
-            	</li>
-            	<li><a href="" class="lie"> PROFILE </li>
-            	<li><a href="" class="lie"> GALLERY </li>
-            	<li><a href="" class="lie"> CONTACT US </li>
+            	<!--</ul>-->
+            	<!--</li>-->
+            	<!--<li><a href="" class="lie"> PROFILE </li>-->
+            	<!--<li><a href="" class="lie"> GALLERY </li>-->
+            	<!--<li><a href="" class="lie"> CONTACT US </li>-->
             </ul>
 
             </div>
