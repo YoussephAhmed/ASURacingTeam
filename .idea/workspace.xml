@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c6ec2bf2-69d4-4ab8-a727-ae7748cffc36" name="Default" comment="integrating Reg system with the ticket system">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/static/registeration/css/style.css" afterPath="$PROJECT_DIR$/registeration/static/registeration/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/templates/registeration/base.html" afterPath="$PROJECT_DIR$/registeration/templates/registeration/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/views.py" afterPath="$PROJECT_DIR$/registeration/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html" afterPath="$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html" afterPath="$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html" />
     </list>
     <ignored path="ASURacingTeam.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +30,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketSys/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
+            <state relative-caret-position="1911">
               <caret line="99" column="48" selection-start-line="99" selection-start-column="48" selection-end-line="99" selection-end-column="48" />
               <folding />
             </state>
@@ -40,7 +40,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketSys/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
+            <state relative-caret-position="630">
               <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
               <folding>
                 <element signature="e#107#139#0" expanded="true" />
@@ -49,20 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/registeration/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="849">
+            <state relative-caret-position="714">
               <caret line="41" column="69" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
@@ -74,15 +64,15 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="108" column="64" selection-start-line="108" selection-start-column="64" selection-end-line="108" selection-end-column="64" />
+            <state relative-caret-position="553">
+              <caret line="109" column="92" selection-start-line="96" selection-start-column="16" selection-end-line="109" selection-end-column="92" />
               <folding>
-                <marker date="1476921295236" expanded="false" signature="5032:5049" ph="..." />
-                <marker date="1476921295236" expanded="false" signature="5113:5124" ph="..." />
-                <marker date="1476921295236" expanded="false" signature="5225:5236" ph="..." />
-                <marker date="1476921295236" expanded="false" signature="5308:5319" ph="..." />
-                <marker date="1476921295236" expanded="false" signature="5388:5399" ph="..." />
-                <marker date="1476921295236" expanded="false" signature="5472:5483" ph="..." />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,29 +98,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ASURT_2/settings.py">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-881">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="427">
+              <caret line="96" column="84" selection-start-line="96" selection-start-column="84" selection-end-line="96" selection-end-column="84" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html">
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-              <folding>
-                <marker date="1476921295208" expanded="false" signature="4504:4521" ph="..." />
-                <marker date="1476921295208" expanded="false" signature="4585:4596" ph="..." />
-                <marker date="1476921295208" expanded="false" signature="4697:4708" ph="..." />
-                <marker date="1476921295208" expanded="false" signature="4780:4791" ph="..." />
-                <marker date="1476921295208" expanded="false" signature="4860:4871" ph="..." />
-                <marker date="1476921295208" expanded="false" signature="4944:4955" ph="..." />
-              </folding>
+            <state relative-caret-position="870">
+              <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,14 +160,14 @@
       <list>
         <option value="$PROJECT_DIR$/ticketSys/static/ticketSys/css/Dashboard_Style.css" />
         <option value="$PROJECT_DIR$/ticketSys/static/ticketSys/css/style.css" />
-        <option value="$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html" />
         <option value="$PROJECT_DIR$/ticketSys/templates/ticketSys/dashboard.html" />
         <option value="$PROJECT_DIR$/ticketSys/templates/ticketSys/addTicket.html" />
         <option value="$PROJECT_DIR$/ticketSys/views.py" />
         <option value="$PROJECT_DIR$/registeration/views.py" />
+        <option value="$PROJECT_DIR$/registeration/static/registeration/css/style.css" />
         <option value="$PROJECT_DIR$/registeration/templates/registeration/base.html" />
         <option value="$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html" />
-        <option value="$PROJECT_DIR$/registeration/static/registeration/css/style.css" />
+        <option value="$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html" />
       </list>
     </option>
   </component>
@@ -208,7 +208,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -295,68 +294,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ticketSys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketSys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASURacingTeam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASURacingTeam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rtMembers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASURacingTeam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASURacingTeam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registeration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASURacingTeam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASURacingTeam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registeration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="registeration" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -425,6 +362,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -648,6 +586,104 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ticketSys/views.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1911">
+          <caret line="99" column="48" selection-start-line="99" selection-start-column="48" selection-end-line="99" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+          <folding>
+            <element signature="e#107#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="41" column="69" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2268">
+          <caret line="108" column="64" selection-start-line="108" selection-start-column="64" selection-end-line="108" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/static/registeration/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ASURT_2/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/addTicket.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/views.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -675,12 +711,12 @@
         <state relative-caret-position="1554">
           <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding>
-            <marker date="1476921295208" expanded="false" signature="4504:4521" ph="..." />
-            <marker date="1476921295208" expanded="false" signature="4585:4596" ph="..." />
-            <marker date="1476921295208" expanded="false" signature="4697:4708" ph="..." />
-            <marker date="1476921295208" expanded="false" signature="4780:4791" ph="..." />
-            <marker date="1476921295208" expanded="false" signature="4860:4871" ph="..." />
-            <marker date="1476921295208" expanded="false" signature="4944:4955" ph="..." />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -689,7 +725,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
           <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -697,7 +740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,7 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -778,7 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -786,7 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="753">
           <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -794,7 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -802,7 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -810,29 +846,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1491">
-          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
+        <state relative-caret-position="546">
           <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
           <folding />
         </state>
@@ -840,7 +859,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ASURT_2/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-881">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -848,7 +867,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketSys/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
+        <state relative-caret-position="1911">
           <caret line="99" column="48" selection-start-line="99" selection-start-column="48" selection-end-line="99" selection-end-column="48" />
           <folding />
         </state>
@@ -864,7 +883,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketSys/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
+        <state relative-caret-position="630">
           <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
           <folding>
             <element signature="e#107#139#0" expanded="true" />
@@ -882,25 +901,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/registeration/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="849">
+        <state relative-caret-position="714">
           <caret line="41" column="69" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="108" column="64" selection-start-line="108" selection-start-column="64" selection-end-line="108" selection-end-column="64" />
-          <folding>
-            <marker date="1476921295236" expanded="false" signature="5032:5049" ph="..." />
-            <marker date="1476921295236" expanded="false" signature="5113:5124" ph="..." />
-            <marker date="1476921295236" expanded="false" signature="5225:5236" ph="..." />
-            <marker date="1476921295236" expanded="false" signature="5308:5319" ph="..." />
-            <marker date="1476921295236" expanded="false" signature="5388:5399" ph="..." />
-            <marker date="1476921295236" expanded="false" signature="5472:5483" ph="..." />
           </folding>
         </state>
       </provider>
@@ -913,18 +917,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/registeration/templates/registeration/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="109" column="92" selection-start-line="96" selection-start-column="16" selection-end-line="109" selection-end-column="92" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        <state relative-caret-position="427">
+          <caret line="96" column="84" selection-start-line="96" selection-start-column="84" selection-end-line="96" selection-end-column="84" />
           <folding>
-            <marker date="1476921295208" expanded="false" signature="4504:4521" ph="..." />
-            <marker date="1476921295208" expanded="false" signature="4585:4596" ph="..." />
-            <marker date="1476921295208" expanded="false" signature="4697:4708" ph="..." />
-            <marker date="1476921295208" expanded="false" signature="4780:4791" ph="..." />
-            <marker date="1476921295208" expanded="false" signature="4860:4871" ph="..." />
-            <marker date="1476921295208" expanded="false" signature="4944:4955" ph="..." />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
