@@ -371,11 +371,11 @@ model</columns>
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
-    <column id="91" parent="12" name="userid_id">
+    <column id="91" parent="12" name="role">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
-    <column id="92" parent="12" name="role">
+    <column id="92" parent="12" name="user_id">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
@@ -385,7 +385,7 @@ model</columns>
     </key>
     <foreign-key id="94" parent="12" name="#FAKE_rtMembers_rtmember_1">
       <name-surrogate>1</name-surrogate>
-      <columns>userid_id</columns>
+      <columns>user_id</columns>
       <deferrable>1</deferrable>
       <initially-deferred>1</initially-deferred>
       <ref-key>~.auth_user.#1</ref-key>
@@ -406,7 +406,7 @@ model</columns>
       <mandatory>1</mandatory>
       <data-type>VARCHAR(1000)(0,-1)|12</data-type>
     </column>
-    <column id="99" parent="14" name="commentid_id">
+    <column id="99" parent="14" name="comment_id">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
@@ -416,7 +416,7 @@ model</columns>
     </key>
     <foreign-key id="101" parent="14" name="#FAKE_ticketSys_commentimg_1">
       <name-surrogate>1</name-surrogate>
-      <columns>commentid_id</columns>
+      <columns>comment_id</columns>
       <deferrable>1</deferrable>
       <initially-deferred>1</initially-deferred>
       <ref-key>~.ticketSys_ticketcomment.#1</ref-key>
@@ -435,15 +435,15 @@ model</columns>
       <mandatory>1</mandatory>
       <data-type>VARCHAR(1000)(0,-1)|12</data-type>
     </column>
-    <column id="105" parent="15" name="memberid_id">
+    <column id="105" parent="15" name="state">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
-    <column id="106" parent="15" name="userid_id">
+    <column id="106" parent="15" name="user_id">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
-    <column id="107" parent="15" name="state">
+    <column id="107" parent="15" name="ticketMember_id">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
@@ -453,19 +453,19 @@ model</columns>
     </key>
     <foreign-key id="109" parent="15" name="#FAKE_ticketSys_ticket_2">
       <name-surrogate>1</name-surrogate>
-      <columns>memberid_id</columns>
+      <columns>user_id</columns>
       <deferrable>1</deferrable>
       <initially-deferred>1</initially-deferred>
-      <ref-key>~.ticketSys_ticketmember.#1</ref-key>
+      <ref-key>~.auth_user.#1</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>
     <foreign-key id="110" parent="15" name="#FAKE_ticketSys_ticket_1">
       <name-surrogate>1</name-surrogate>
-      <columns>userid_id</columns>
+      <columns>ticketMember_id</columns>
       <deferrable>1</deferrable>
       <initially-deferred>1</initially-deferred>
-      <ref-key>~.auth_user.#1</ref-key>
+      <ref-key>~.ticketSys_ticketmember.#1</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>
@@ -477,11 +477,11 @@ model</columns>
       <mandatory>1</mandatory>
       <data-type>VARCHAR(1000)(0,-1)|12</data-type>
     </column>
-    <column id="113" parent="16" name="memberid_id">
+    <column id="113" parent="16" name="ticket_id">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
-    <column id="114" parent="16" name="ticketid_id">
+    <column id="114" parent="16" name="ticketMember_id">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
@@ -491,19 +491,19 @@ model</columns>
     </key>
     <foreign-key id="116" parent="16" name="#FAKE_ticketSys_ticketcomment_2">
       <name-surrogate>1</name-surrogate>
-      <columns>memberid_id</columns>
+      <columns>ticket_id</columns>
       <deferrable>1</deferrable>
       <initially-deferred>1</initially-deferred>
-      <ref-key>~.ticketSys_ticketmember.#1</ref-key>
+      <ref-key>~.ticketSys_ticket.#1</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>
     <foreign-key id="117" parent="16" name="#FAKE_ticketSys_ticketcomment_1">
       <name-surrogate>1</name-surrogate>
-      <columns>ticketid_id</columns>
+      <columns>ticketMember_id</columns>
       <deferrable>1</deferrable>
       <initially-deferred>1</initially-deferred>
-      <ref-key>~.ticketSys_ticket.#1</ref-key>
+      <ref-key>~.ticketSys_ticketmember.#1</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>
@@ -515,7 +515,7 @@ model</columns>
       <mandatory>1</mandatory>
       <data-type>VARCHAR(1000)(0,-1)|12</data-type>
     </column>
-    <column id="120" parent="17" name="ticketid_id">
+    <column id="120" parent="17" name="ticket_id">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
@@ -525,7 +525,7 @@ model</columns>
     </key>
     <foreign-key id="122" parent="17" name="#FAKE_ticketSys_ticketimg_1">
       <name-surrogate>1</name-surrogate>
-      <columns>ticketid_id</columns>
+      <columns>ticket_id</columns>
       <deferrable>1</deferrable>
       <initially-deferred>1</initially-deferred>
       <ref-key>~.ticketSys_ticket.#1</ref-key>
@@ -536,7 +536,7 @@ model</columns>
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
-    <column id="124" parent="18" name="memberid_id">
+    <column id="124" parent="18" name="rtMember_id">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
@@ -546,7 +546,7 @@ model</columns>
     </key>
     <foreign-key id="126" parent="18" name="#FAKE_ticketSys_ticketmember_1">
       <name-surrogate>1</name-surrogate>
-      <columns>memberid_id</columns>
+      <columns>rtMember_id</columns>
       <deferrable>1</deferrable>
       <initially-deferred>1</initially-deferred>
       <ref-key>~.rtMembers_rtmember.#1</ref-key>
