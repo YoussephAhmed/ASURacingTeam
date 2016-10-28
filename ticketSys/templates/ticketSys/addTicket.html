@@ -1,25 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'ticketSys/base.html' %}
+    {% load staticfiles %}
+
+{% block title %}Add Ticket{% endblock %}
+
+
+{% block body %}
 <h2>Hello, {{ user }}</h2>
-<strong>Add a Ticket</strong><br>
-<br>
-<form action="{% url 'ticketSys:add_ticket' %}" method="post">
-    {% csrf_token %}
-    <label>The Title : </label> <input type="text" name="title"><br>
-    <label>Selsect User : </label>
-    <select name="selectedUser"><!--Jst testing that the users sent are the correct ones -->
-        {% for user in users %}
-            <option value="{{ user.id }}">{{ user }}</option>
-        {% endfor %}
-    </select><br>
-    <label>Need HR ?</label> <input type="checkbox" name="needhr" id="needhr" value="yes"/><br>
-    <label>Content : </label> <input type="text" name="content"><br>
-    <input type="submit">
+<a href="{% url 'ticketSys:dashBoard'  %}"><button class="btn btn-primary">Back To Dashboard</button></a>
+ {% if error_message %}
+                <div class="alert alert-danger" role="alert">Error Wrong Entry !!!</div>
+
+        {% endif %}
+<div class="container">
+        <div class="panel panel-default ticket-panel">
+          <div class="panel-body">
+            <form action="{% url 'ticketSys:add_ticket' %}" method="post">
+                {% csrf_token %}
+              <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input class="form-control" type="text" name="title" placeholder="Enter the ticket title here..." required="true"></input>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Select User </label>
+                        <select name="selectedUser">
+                        {% for user in users %}
+                            <option value="{{ user.id }}">{{ user }}</option>
+                        {% endfor %}
+                        </select>
+              </div>
+                <div class="form-group">
+                     <label>Need HR ?</label> <input type="checkbox" name="needhr" id="needhr" value="yes"/><br>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Content</label>
+                    <input type="text" class="form-control" id="content" placeholder="Enter the content..." name="content" required="true">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-</body>
-</html>
+</div></div></div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+
+{% endblock %}

@@ -4,8 +4,8 @@ from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Q
 from .forms import UserForm
-
-
+from ticketSys.models import Ticket
+from ticketSys.views import dashBoard
 # Create your views here.
 # def registeration(request):
 # 	x = HttpResponse("<h1>hi</h1>")
@@ -36,7 +36,11 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                return render(request, 'registeration/index.html',)
+                # Tickets = Ticket.objects.all()
+                # context={'Tickets':Tickets,}
+                # return render(request, 'ticketSys/dashBoard.html', context )
+                # return render(request, 'registeration/index.html',)
+                return dashBoard(request)
             else:
                 return render(request, 'registeration/login.html', {'error_message': 'Your account has been disabled'})
         else:

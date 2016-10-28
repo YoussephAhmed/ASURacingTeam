@@ -5,12 +5,12 @@
 
 
 {% block body %}
-<div class="container ticketView-panel">
+<div class="container">
+
+<!--<span><a href="{% url 'ticketSys:dashBoard'  %}"><&#45;&#45;Back</a></span>-->
+<h2>  Hello, {{ user }}!</h2>
 <!--on clicking go to the URL with the name dashBoard in the app ticketSys-->
     <a href="{% url 'ticketSys:dashBoard'  %}"><button class="btn btn-primary">Back To Dashboard</button></a>
-<!--<span><a href="{% url 'ticketSys:dashBoard'  %}"><&#45;&#45;Back</a></span>-->
-<h3>  Hello, {{ user }}!</h3>
-
 
 
  <section>
@@ -25,10 +25,10 @@
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">User </label>
-                <text class="form-control" type="text" disabled>{{ ticket.userid }}</text>
+                <text class="form-control" type="text" disabled>{{ ticket.user }}</text>
               </div><div class="form-group">
                 <label for="exampleInputEmail1">Submitted By </label>
-                <text class="form-control" type="text" disabled>{{ ticket.memberid }}</text>
+                <text class="form-control" type="text" disabled>{{ ticket.ticketMember }}</text>
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Content</label>
@@ -73,7 +73,7 @@
 
               <!-- start comment block -->
               <div class="comment">
-                  <p><strong>{{ com.memberid }}</strong></p>
+                  <p><strong>{{ com.ticketMember }}</strong></p>
                 <a class="comment-avatar pull-left" href="#"><img src="{% static 'ticketSys/images/pp.jpg' %}"></a>
 
                   <div class="comment-text">
@@ -95,7 +95,7 @@
                 <form action="{% url 'ticketSys:add_comment' ticket.id %}" method="post">
                     {% csrf_token %}
                   <div class="form-group">
-                    <input type="text" class="form-control" id="comment" placeholder="Jane Doe" name="comment"><!--ASHOUR: adjust placeholder -->
+                    <input type="text" class="form-control" id="comment" placeholder="Enter a Comment" name="comment"><!--ASHOUR: adjust placeholder -->
                   </div>
                   <button type="submit" class="btn btn-primary">comment</button>
                 </form>

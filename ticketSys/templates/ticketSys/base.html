@@ -5,10 +5,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{% block title %}ASURT{% endblock %}</title>
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
-
-<!--&lt;!&ndash; Optional theme &ndash;&gt;-->
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
 
 <!-- Latest compiled and minified JavaScript -->
   	<link href="{% static 'ticketSys/css/bootstrap.css' %}" type="text/css" rel="stylesheet">
@@ -16,37 +12,44 @@
   	<link href="{% static 'ticketSys/css/style_footer.css' %}" type="text/css" rel="stylesheet">
   	<link href="{% static 'ticketSys/css/style_header.css' %}" type="text/css" rel="stylesheet">
   	<link href="{% static 'ticketSys/css/style.css' %}" type="text/css" rel="stylesheet">
+
 </head>
 
 <body>
+
 <nav class="navbar navbar-default header nav1">
   <div class="container-fluid">
     <div class="navbar-header">
+    <img class="img-responsive logo ic2" src="{% static 'ticketSys/images/logo.png' %}">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
     </div>
-
+    <div class="row">
     <div class="collapse navbar-collapse  nav1 " id="myNavbar">
     <div class="ic">
-    <a class="navbar-brand" href="#"><img class="img-responsive logo" src="{% static 'ticketSys/images/logo.png' %}" alt=""></a>
+    <a class="navbar-brand " href="#"><img class="img-responsive logo " src="{% static 'ticketSys/images/logo.png' %}" alt=""></a>
     </div>
-     <ul class="nav navbar-nav">
-        <li><a ng-href="/about">ABOUT US</a></li>
-        <li><a  ng-href="/achievements">ACHIEVEMENTS</a></li>
+    <div>
+     <ul class="nav navbar-nav nav2">
+       <li><a href="http://asuracingteam.org/about">ABOUT US</a></li>
+        <li><a  href="http://asuracingteam.org/achievements">ACHIEVEMENTS</a></li>
         <li class="navbar-dropdown-toggle">
-          <a  href="">OUR PROJECTS</a></li>
-        <!-- <li ng-if="root.me"><a ng-class="{active: vm.isActive('/apply')}" ng-href="/apply">APPLY</a></li> -->
-        <li ng-if="!root.me" class="navbar-dropdown-toggle">
-          <a  href="">JOIN US</a></li>
-        <li ng-if="root.me"><a  href="/profile">PROFILE</a></li>
+          <!--<a  href="">OUR PROJECTS</a></li>-->
+        <!--&lt;!&ndash; <li ng-if="root.me"><a ng-class="{active: vm.isActive('/apply')}" ng-href="/apply">APPLY</a></li> &ndash;&gt;-->
+        <!--<li ng-if="!root.me" class="navbar-dropdown-toggle">-->
+          <!--<a  href="">JOIN US</a></li>-->
+        <li ng-if="root.me"><a  href="http://asuracingteam.org/profile">PROFILE</a></li>
         <!-- <li ng-if="!root.me"><a ng-class="{active: vm.isActive('/user/login')}" href="/user/login">LOGIN</a></li> -->
-        <li ng-if="root.me"><a ng-click="vm.logout()" href="">LOGOUT</a></li>
-        <li><a  ng-href="/gallery">GALLERY</a></li>
-        <li><a  ng-href="/contact">CONTACT US</a></li>
-      </ul>>
+        <li><a  href="http://asuracingteam.org/gallery">GALLERY</a></li>
+        <li><a  href="http://asuracingteam.org/contact">CONTACT US</a></li>
+        <li><a  href="{% url 'ticketSys:dashBoard'  %}">TICKET SYSTEM</a></li>
+         <li ng-if="root.me"><a ng-click="vm.logout()" href="{% url 'registeration:logout_user' %}">LOGOUT</a></li>
+      </ul>
+      </div>
+    </div>
     </div>
   </div>
 </nav>
@@ -64,12 +67,13 @@
   </div>
  <!------------------------------------------------------->
 
-<div class="row float-right">
-<div class="col-md-6 col-md-offset-3">
 
-    <div class="container">
+
+    <div class="container rtPanel">
+
 	 {% block body %}
 	 {% endblock %}
+
     </div>
 </div>
 </div>
@@ -83,29 +87,29 @@
     <div class="footer footer1">
       <div class="container-fluid">
           <div class="row">
-            <div class="col-sm-5 col-xs-12">
+            <div class="col-sm-5 col-xs-12 col-md-offset-1">
               <img class="img-responsive img1" src="{% static 'ticketSys/images/black.jpg' %}" />
               <br>
               <div class="img1">
                 Copyright &copy; 2016 ASU RACING TEAM <br> All Rights Reserved.
               </div>
             </div>
-            <div class="col-sm-7 col-xs-11  text-right footer1 forh">
+            <div class="col-sm-7 col-xs-11  text-right footer1 forh col-md-offset-10">
             <ul class="ulm">
-            	<li><a href="" class="lie"> ABOUT US </li>
-            	<li><a href="" class="lie" style="padding-right:5px"> ACHIEVEMENTS </li>
+            	<li><a href="http://asuracingteam.org/about" class="lie"> ABOUT US </li>
+            	<li><a href="http://asuracingteam.org/achievements" class="lie" style="padding-right:5px"> ACHIEVEMENTS </li>
             	<li><a href="" style="color:white"> OUR PROJECTS <br>
             	<ul class="uls">
-            		<li><a href="" style="color:white"> FORMULA STUDENT TEAM</li>
-            		<li><a href="" style="color:white"> ECO GASOLINE TEAM</li>
-            		<li><a href="" style="color:white"> HYBRID ELECTRIC TEAM </li>
-            		<li><a href="" style="color:white"> ROV TEAM </li>
+            		<li><a href="http://asuracingteam.org/teams/formula" style="color:white"> FORMULA STUDENT TEAM</li>
+            		<li><a href="http://asuracingteam.org/teams/eco" style="color:white"> ECO GASOLINE TEAM</li>
+            		<li><a href="http://asuracingteam.org/teams/hybrid" style="color:white"> HYBRID ELECTRIC TEAM </li>
+            		<li><a href="http://asuracingteam.org/teams/rov" style="color:white"> ROV TEAM </li>
 
             	</ul>
             	</li>
-            	<li><a href="" class="lie"> PROFILE </li>
-            	<li><a href="" class="lie"> GALLERY </li>
-            	<li><a href="" class="lie"> CONTACT US </li>
+            	<li><a href="http://asuracingteam.org/user/login" class="lie"> LOGIN </li>
+            	<li><a href="http://asuracingteam.org/gallery" class="lie"> GALLERY </li>
+            	<li><a href="http://asuracingteam.org/contact" class="lie"> CONTACT US </li>
             </ul>
 
             </div>
