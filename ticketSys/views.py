@@ -103,7 +103,9 @@ def addTicket(request):
             title = request.POST['title']
             content = request.POST['content']
             if len(title) < 2 or len(content) < 2:  # validate that the title and content are not empty
+
                 return redirect('ticketSys:add_ticket')
+
             ticket = Ticket(ticketMember=ticketMember, user=user, state=state, title=title, content=content)
             ticket.save()
             domain = request.META['HTTP_HOST']

@@ -2,15 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6ec2bf2-69d4-4ab8-a727-ae7748cffc36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/templates/ticketSys/comment.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/templates/ticketSys/index.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ticketSys/templates/ticketSys/ajax_test.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/a55db3c9-e955-4400-81c4-430cb51b1c45.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/a55db3c9-e955-4400-81c4-430cb51b1c45.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rtMembers/migrations/0002_auto_20161017_1245.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rtMembers/migrations/0003_auto_20161017_1246.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rtMembers/migrations/0004_auto_20161017_1248.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rtMembers/migrations/0005_auto_20161017_1249.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rtMembers/migrations/0006_auto_20161017_1252.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rtMembers/migrations/0007_auto_20161017_1256.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/migrations/0002_auto_20161017_1318.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/migrations/0003_auto_20161017_1318.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/migrations/0004_auto_20161017_1319.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/migrations/0005_auto_20161017_1319.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/migrations/0006_auto_20161017_1319.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/migrations/0007_auto_20161017_1320.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/migrations/0008_auto_20161017_1323.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/migrations/0009_auto_20161017_1323.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/migrations/0010_auto_20161017_1324.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/migrations/0011_auto_20161017_1324.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/migrations/0012_auto_20161017_1325.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketSys/migrations/0013_auto_20161017_1325.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASURT_2/urls.py" afterPath="$PROJECT_DIR$/ASURT_2/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html" afterPath="$PROJECT_DIR$/ticketSys/templates/ticketSys/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketSys/urls.py" afterPath="$PROJECT_DIR$/ticketSys/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/static/registeration/css/style.css" afterPath="$PROJECT_DIR$/registeration/static/registeration/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/static/registeration/css/style_header.css" afterPath="$PROJECT_DIR$/registeration/static/registeration/css/style_header.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/templates/registeration/base.html" afterPath="$PROJECT_DIR$/registeration/templates/registeration/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registeration/views.py" afterPath="$PROJECT_DIR$/registeration/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketSys/static/ticketSys/css/Dashboard_Style.css" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/css/Dashboard_Style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketSys/static/ticketSys/css/style.css" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketSys/static/ticketSys/css/style_header.css" afterPath="$PROJECT_DIR$/ticketSys/static/ticketSys/css/style_header.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketSys/templates/ticketSys/addTicket.html" afterPath="$PROJECT_DIR$/ticketSys/templates/ticketSys/addTicket.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html" afterPath="$PROJECT_DIR$/ticketSys/templates/ticketSys/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketSys/templates/ticketSys/dashboard.html" afterPath="$PROJECT_DIR$/ticketSys/templates/ticketSys/dashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketSys/views.py" afterPath="$PROJECT_DIR$/ticketSys/views.py" />
     </list>
     <ignored path="ASURacingTeam.iws" />
@@ -141,6 +162,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -175,7 +197,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -432,8 +453,8 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="DJANGO_SETTINGS_MODULE" value="ASURT_2.settings" />
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="ASURT_2.settings" />
       </envs>
       <option name="SDK_HOME" value="C:\Python27\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -528,9 +549,9 @@
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18635875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18904404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299435" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299435" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -611,6 +632,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ticketSys/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -623,7 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -649,7 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="51" column="47" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -690,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,7 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -789,7 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,7 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="31" column="12" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,7 +924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1540">
           <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -913,21 +935,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/ajax-test-comment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/ajax-test-comment.html" />
     <entry file="file://$PROJECT_DIR$/ASURT_2/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#264#305#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -935,23 +947,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/ajax_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/ajax_test.html" />
     <entry file="file://$PROJECT_DIR$/ticketSys/templates/ticketSys/comment.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -959,7 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1414">
           <caret line="129" column="15" selection-start-line="129" selection-start-column="15" selection-end-line="129" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -967,7 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
