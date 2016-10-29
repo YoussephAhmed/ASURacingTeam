@@ -31,8 +31,7 @@ class TicketMember(models.Model):  # table for RTMembers inrolled in the ticketS
 # Relationship is defined, using ForeignKey. that tells django for example each
 # Ticket instance created from this class will be related to a single RTmember.
 class Ticket(models.Model):
-    ticketMember = models.ForeignKey(TicketMember, on_delete=models.CASCADE,
-                                     related_name='ticket')  # RTmember who issued the ticket
+    ticketMember = models.ForeignKey(TicketMember, on_delete=models.CASCADE,related_name='ticket')  # RTmember who issued the ticket
     user = models.ForeignKey(User, on_delete=models.CASCADE)  # the user who the ticket is about
     state = models.IntegerField(choices=States.STATES)  # the current state of the ticket
     title = models.CharField(max_length=1000)  # the title

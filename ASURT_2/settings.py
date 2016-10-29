@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
     'events',
-    'foreignClub',
+    'foreignClubs',
     'registeration',
     'rtMembers',
     'ticketSys',
