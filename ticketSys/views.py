@@ -8,12 +8,6 @@ from ticketSys import emailSender
 from django.contrib.auth import authenticate, login
 from django.core.files.base import ContentFile
 
-# imports for testing Ajax
-import json
-from django.shortcuts import *
-from django.template import RequestContext
-from linki.forms import *
-
 
 # detail get called like this
 # detail(request=<HttpRequest object>, question_id='34')
@@ -57,7 +51,7 @@ def addComment(request, pk):  # add comment to the ticket detail page
     ticket = Ticket.objects.get(id=pk)
     comm = TicketComment(ticketMember=tm, ticket=ticket, comment=comment)
     comm.save()
-    return redirect('ticketSys:detail', pk)
+    return render(request, 'ticketSys/comment.html', {'com': comm})
 
 
 def changeState(request, pk):
@@ -228,16 +222,5 @@ def addRTMember(request):
     return redirect('ticketSys:choose_RTMember')
 
 
-# def testAjax(request):
-#     if request.method == "POST":
-#         print('post recived')
-#
-#         message = 'something wrong!'
-#         if (form.is_valid()):
-#             print(request.POST['title'])
-#             message = request.POST['title']
-#
-#         return HttpResponse(json.dumps({'message': message}))
-#
-#     return render_to_response('contact/advert.html',
-#                               {'form': AdvertForm()}, RequestContext(request))
+def index(request):  # Used for DEVELOPMENTAL use only to make our lives easier shows shortcuts at the 1st page
+    return render(request, 'ticketSys/index.html')

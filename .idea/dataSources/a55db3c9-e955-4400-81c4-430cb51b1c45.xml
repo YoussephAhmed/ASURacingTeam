@@ -427,17 +427,17 @@ model</columns>
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
-    <column id="103" parent="15" name="title">
-      <mandatory>1</mandatory>
-      <data-type>VARCHAR(1000)(0,-1)|12</data-type>
-    </column>
-    <column id="104" parent="15" name="content">
-      <mandatory>1</mandatory>
-      <data-type>VARCHAR(1000)(0,-1)|12</data-type>
-    </column>
-    <column id="105" parent="15" name="state">
+    <column id="103" parent="15" name="state">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="104" parent="15" name="title">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(1000)(0,-1)|12</data-type>
+    </column>
+    <column id="105" parent="15" name="content">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(1000)(0,-1)|12</data-type>
     </column>
     <column id="106" parent="15" name="user_id">
       <mandatory>1</mandatory>

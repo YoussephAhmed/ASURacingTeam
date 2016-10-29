@@ -30,7 +30,4 @@ urlpatterns = [
     # /RTMemberAdded/
     url(r'^RTMemberAdded/$', views.addRTMember, name='RTMember_Added'),
 
-    # /testAjax/
-    url(r'^testAjax/$', views.testAjax, name='test_ajax'),
-
 ]
