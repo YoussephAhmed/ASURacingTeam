@@ -1,0 +1,21 @@
+{% load staticfiles %}
+
+<comment>
+    <div class="comments">
+
+        <!-- start comment block -->
+        <div class="comment">
+            <p><strong>{{ com.memberid }}</strong></p>
+            <a class="comment-avatar pull-left" href="#"><img
+                    src="{% static 'ticketSys/images/pp.jpg' %}"></a>
+
+            <div class="comment-text">
+                <p>{{ com.comment }}</p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- end comment block-->
+    </div>
+
+    <div class="clearfix"></div>
+</comment>
