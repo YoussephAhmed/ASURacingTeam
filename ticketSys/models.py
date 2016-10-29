@@ -4,7 +4,7 @@
 from __future__ import unicode_literals
 from django.core.urlresolvers import reverse
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User  # should be changed to the proper way for integrations
 from rtMembers.models import RTMember
 from django.forms import forms
 from django.forms import ImageField
@@ -31,7 +31,8 @@ class TicketMember(models.Model):  # table for RTMembers inrolled in the ticketS
 # Relationship is defined, using ForeignKey. that tells django for example each
 # Ticket instance created from this class will be related to a single RTmember.
 class Ticket(models.Model):
-    ticketMember = models.ForeignKey(TicketMember, on_delete=models.CASCADE,related_name='ticket')  # RTmember who issued the ticket
+    ticketMember = models.ForeignKey(TicketMember, on_delete=models.CASCADE,
+                                     related_name='ticket')  # RTmember who issued the ticket
     user = models.ForeignKey(User, on_delete=models.CASCADE)  # the user who the ticket is about
     state = models.IntegerField(choices=States.STATES)  # the current state of the ticket
     title = models.CharField(max_length=1000)  # the title
@@ -47,18 +48,19 @@ class Ticket(models.Model):
 
 
 class TicketComment(models.Model):
-    ticketMember = models.ForeignKey(TicketMember, on_delete=models.CASCADE,related_name='comment')  # RTmember submitted the comment
+    ticketMember = models.ForeignKey(TicketMember, on_delete=models.CASCADE,
+                                     related_name='comment')  # RTmember submitted the comment
     ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE)  # Related ticket
     comment = models.CharField(max_length=1000)  # The content of the comment
 
 
 class CommentImg(models.Model):
-    comment = models.ForeignKey(TicketComment, on_delete=models.CASCADE,related_name='img')  # Related comment's image
+    comment = models.ForeignKey(TicketComment, on_delete=models.CASCADE, related_name='img')  # Related comment's image
     url = models.CharField(max_length=1000)  # URL of the image
 
 
 class TicketImg(models.Model):
-    ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE,related_name='img')  # Related ticket's image
+    ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE, related_name='img')  # Related ticket's image
     url = models.CharField(max_length=1000)  # URL of the image
 
 
