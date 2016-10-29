@@ -51,7 +51,7 @@ def addComment(request, pk):  # add comment to the ticket detail page
     ticket = Ticket.objects.get(id=pk)
     comm = TicketComment(ticketMember=tm, ticket=ticket, comment=comment)
     comm.save()
-    return redirect('ticketSys:detail', pk)
+    return render(request, 'ticketSys/comment.html', {'com': comm})
 
 
 def changeState(request, pk):
@@ -222,3 +222,7 @@ def addRTMember(request):
     rtMember = RTMember(user=normalUser, role=roleOfRTMember)
     rtMember.save()
     return redirect('ticketSys:choose_RTMember')
+
+
+def index(request):  # Used for DEVELOPMENTAL use only to make our lives easier shows shortcuts at the 1st page
+    return render(request, 'ticketSys/index.html')

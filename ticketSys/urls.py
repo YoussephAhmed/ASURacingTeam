@@ -11,9 +11,6 @@ urlpatterns = [
     # /tickets/
     url(r'^$', views.dashBoard, name='dashBoard'),
 
-    # # /tickets/add/
-    # url(r'^add/', views.TicketCreate.as_view(), name='add_ticket'),
-
     # /tickets/add/
     url(r'^add/', views.addTicket, name='add_ticket'),
 
@@ -32,4 +29,5 @@ urlpatterns = [
     url(r'^chooseRTMember/', views.chooseRTMember, name='choose_RTMember'),
     # /RTMemberAdded/
     url(r'^RTMemberAdded/$', views.addRTMember, name='RTMember_Added'),
+
 ]
