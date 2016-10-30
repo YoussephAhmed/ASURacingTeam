@@ -15,7 +15,7 @@
         </select>
         <select name="clubid">
             {% for club in clubs %}
-                <option value="{{ club.id }}">{{ club.name }}</option>
+                <option value="{{ club.id }}">{{ club }}</option>
             {% endfor %}
         </select>
     </div>
@@ -44,7 +44,7 @@
                     document.getElementById("display_heads_list").innerHTML = data + document.getElementById("display_heads_list").innerHTML;
 
                     $('html, body').animate({
-                        scrollTop: $("#comments").offset().top - 200
+                        scrollTop: $("#display_heads_list").offset().top - 200
                     }, 1000);
                 }
             });

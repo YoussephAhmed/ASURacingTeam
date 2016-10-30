@@ -11,7 +11,10 @@ class Event(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
     year = models.IntegerField()
-    attendee_num = models.IntegerField()
+    attendee_num = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.name + ' - ' + ('Open' if self.open else 'Closed') + ' - ' + str(self.year)
 
 
 class Reservation(models.Model):
@@ -24,6 +27,9 @@ class Reservation(models.Model):
 class Role(models.Model):
     name = models.CharField(max_length=1000)
 
+    def __str__(self):
+        return self.name
+
 
 class Organizer(models.Model):
     name = models.CharField(max_length=1000)
@@ -31,6 +37,9 @@ class Organizer(models.Model):
     # todo bla bla bla to be added @morsy
     event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name="organize_event")
     role = models.ForeignKey(Role, on_delete=models.CASCADE, related_name="organizer_role")
+
+    def __str__(self):
+        return self.name + ' - ' + self.role.__str__() + ' - ' + self.event.__str__() + ' - ' + self.head.__str__()
 
 
 class Attendee(models.Model):
