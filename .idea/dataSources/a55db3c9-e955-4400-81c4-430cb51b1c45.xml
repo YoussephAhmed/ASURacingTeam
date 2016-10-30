@@ -434,7 +434,7 @@ model</columns>
       <mandatory>1</mandatory>
       <data-type>DATE(0,-1)|12</data-type>
     </column>
-    <column id="111" parent="13" name="attendee_count">
+    <column id="111" parent="13" name="attendee_num">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>

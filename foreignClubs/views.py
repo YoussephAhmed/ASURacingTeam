@@ -26,6 +26,9 @@ def heads(request):
     else:  # adding a new head
         user = User.objects.get(id=request.POST['userid'])
         club = Club.objects.get(id=request.POST['clubid'])
-        head = Head(user=user, club=club)
-        head.save()
+        try:
+            head = Head(user=user, club=club)
+            head.save()
+        except:
+            return render(request, "foreignClubs/one_head.html", {'head': "ERROR can't save"})
         return render(request, "foreignClubs/one_head.html", {'head': head})

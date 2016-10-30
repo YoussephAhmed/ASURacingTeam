@@ -27,6 +27,9 @@ urlpatterns = [
     # /foreignClubs/
     url(r'^foreignClubs/', include('foreignClubs.urls', namespace='foreignClubs', app_name='foreignClubs')),
 
+    # /events/
+    url(r'^events/', include('events.urls', namespace='events', app_name='events')),
+
     # Default page to access all the work (DEVELOPMENT ONLY)
     url(r'^$', index, name='index'),
 
