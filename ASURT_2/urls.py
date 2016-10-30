@@ -24,6 +24,9 @@ urlpatterns = [
     # /registeration/
     url(r'^registeration/', include('registeration.urls', namespace='registeration', app_name='registeration')),
 
+    # /foreignClubs/
+    url(r'^foreignClubs/', include('foreignClubs.urls', namespace='foreignClubs', app_name='foreignClubs')),
+
     # Default page to access all the work (DEVELOPMENT ONLY)
     url(r'^$', index, name='index'),
 
